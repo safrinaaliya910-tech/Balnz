@@ -10,7 +10,7 @@ import { AnimatePresence, motion } from "framer-motion"
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
+  { name: "About BALNZ", href: "/about" },
   { name: "Programs", href: "/programs" },
   { name: "Services", href: "/services" },
   { name: "Resources", href: "/resources" },
@@ -32,7 +32,6 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  // Prevent body scroll when menu is open
   useEffect(() => {
     if (mobileMenuOpen) {
       document.body.style.overflow = "hidden"
@@ -45,10 +44,10 @@ export function Header() {
   }, [mobileMenuOpen])
 
   return (
-    <header 
+    <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ? "bg-background/80 backdrop-blur-md border-b border-border shadow-md py-3" 
+        scrolled
+          ? "bg-background/80 backdrop-blur-md border-b border-border shadow-md py-3"
           : "bg-transparent py-5"
       }`}
     >
@@ -65,15 +64,15 @@ export function Header() {
             />
           </Link>
         </div>
-        
+
         <div className="flex lg:hidden items-center gap-4">
           {mounted && (
             <button
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               className="p-2 rounded-full text-foreground hover:bg-secondary transition-colors"
               aria-label="Toggle dark mode"
             >
-              {theme === 'dark' ? <Sun className="h-6 w-6" /> : <Moon className="h-6 w-6" />}
+              {theme === "dark" ? <Sun className="h-6 w-6" /> : <Moon className="h-6 w-6" />}
             </button>
           )}
           <button
@@ -85,7 +84,7 @@ export function Header() {
             <Menu className="h-7 w-7" aria-hidden="true" />
           </button>
         </div>
-        
+
         <div className="hidden lg:flex lg:gap-x-8">
           {navigation.map((item) => (
             <Link
@@ -98,27 +97,30 @@ export function Header() {
             </Link>
           ))}
         </div>
-        
+
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-6">
           {mounted && (
             <button
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               className="p-2 rounded-full text-foreground hover:bg-secondary transition-all duration-300 hover:rotate-12"
               aria-label="Toggle dark mode"
             >
-              {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+              {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </button>
           )}
-          <Button asChild size="lg" className="text-base rounded-2xl shadow-xl shadow-primary/25 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/40 transition-all duration-300">
+          <Button
+            asChild
+            size="lg"
+            className="text-base rounded-2xl shadow-xl shadow-primary/25 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/40 transition-all duration-300"
+          >
             <Link href="/contact">Get Started</Link>
           </Button>
         </div>
       </nav>
-      
+
       <AnimatePresence>
         {mobileMenuOpen && (
           <>
-            {/* Mobile menu overlay */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -127,8 +129,7 @@ export function Header() {
               onClick={() => setMobileMenuOpen(false)}
               aria-hidden="true"
             />
-            
-            {/* Mobile menu panel - slides from right */}
+
             <motion.div
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
@@ -137,11 +138,7 @@ export function Header() {
               className="lg:hidden fixed inset-y-0 right-0 z-50 w-full max-w-sm bg-background shadow-2xl border-l border-border"
             >
               <div className="flex items-center justify-between px-6 py-5 border-b border-border">
-                <Link 
-                  href="/" 
-                  className="flex items-center" 
-                  onClick={() => setMobileMenuOpen(false)}
-                >
+                <Link href="/" className="flex items-center" onClick={() => setMobileMenuOpen(false)}>
                   <Image
                     src="https://i.ibb.co/YTdRw0DG/Screenshot-2026-04-14-124526-removebg-preview.png"
                     alt="BALNZ Logo"
@@ -159,7 +156,7 @@ export function Header() {
                   <X className="h-7 w-7" aria-hidden="true" />
                 </button>
               </div>
-              
+
               <div className="px-6 py-6 overflow-y-auto h-[calc(100vh-80px)]">
                 <div className="space-y-2">
                   {navigation.map((item) => (
@@ -173,9 +170,13 @@ export function Header() {
                     </Link>
                   ))}
                 </div>
-                
+
                 <div className="mt-8 pt-6 border-t border-border">
-                  <Button asChild size="lg" className="w-full text-base rounded-2xl shadow-xl shadow-primary/25 hover:shadow-2xl hover:shadow-primary/40 transition-all duration-300">
+                  <Button
+                    asChild
+                    size="lg"
+                    className="w-full text-base rounded-2xl shadow-xl shadow-primary/25 hover:shadow-2xl hover:shadow-primary/40 transition-all duration-300"
+                  >
                     <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
                       Get Started
                     </Link>

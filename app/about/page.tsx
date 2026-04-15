@@ -6,54 +6,54 @@ import { Award, Clock, Users, Target } from "lucide-react"
 
 const team = [
   {
-    name: "Dr. Emily Chen",
-    role: "Founder & Lead Balance Specialist",
-    bio: "20+ years in physical therapy and geriatric care.",
-    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop",
+    name: "A Moment That Sparked a Mission",
+    role: "The Beginning of BALNZ",
+    bio: "BALNZ was born from a real-life event that revealed how quickly a fall can change a family’s life and why balance training matters.",
+    image: "/images/testimonial_2.png",
   },
   {
-    name: "Michael Torres",
-    role: "Senior Balance Coach",
-    bio: "Certified PT specializing in fall prevention.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
+    name: "A Physical Therapist’s Journey",
+    role: "From Sports to Geriatrics",
+    bio: "Daniel began as a sports physical therapist and later discovered that older adults need the same movement principles as athletes—delivered with safety and compassion.",
+    image: "/images/contact_support.png",
   },
   {
-    name: "Sarah Williams",
-    role: "Workplace Wellness Director",
-    bio: "Corporate wellness expert.",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+    name: "The Creation of BALNZ",
+    role: "Science-Based Movement",
+    bio: "BALNZ blends physical therapy, neuroscience, Tai Chi principles, and yoga-inspired control into one simple, safe, and accessible system.",
+    image: "/images/about_coach.png",
   },
   {
-    name: "James Park",
-    role: "Athletic Performance Coach",
-    bio: "Former professional athlete.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+    name: "A Message From Daniel",
+    role: "Movement for Life",
+    bio: "Balance is not just a physical skill—it’s independence, safety, and quality of life. BALNZ was created to help people move with confidence.",
+    image: "/images/services_oneonone.png",
   },
 ]
 
 const stats = [
-  { value: "10,000+", label: "Clients Served", icon: Users },
-  { value: "15+", label: "Years Experience", icon: Clock },
-  { value: "98%", label: "Satisfaction", icon: Award },
-  { value: "40%", label: "Fall Risk Reduction", icon: Target },
+  { value: "1,000+", label: "Adults Tested", icon: Users },
+  { value: "50+", label: "Ages Studied", icon: Clock },
+  { value: "4", label: "Core Disciplines Blended", icon: Award },
+  { value: "1", label: "Mission: Prevent Falls", icon: Target },
 ]
 
 const values = [
   {
-    title: "Compassion",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop",
+    title: "Simplicity",
+    image: "/images/programs_home.png",
   },
   {
-    title: "Excellence",
-    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&h=400&fit=crop",
+    title: "Science",
+    image: "/images/services_oneonone.png",
   },
   {
-    title: "Accessibility",
-    image: "https://images.unsplash.com/photo-1518459031867-a89b944bffe4?w=600&h=400&fit=crop",
+    title: "Confidence",
+    image: "/images/services_group.png",
   },
   {
-    title: "Empowerment",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop",
+    title: "Dignity",
+    image: "/images/programs_senior.png",
   },
 ]
 
@@ -63,8 +63,8 @@ export default function AboutPage() {
       {/* Hero Section - Full width image */}
       <section className="relative h-[60vh] min-h-[400px]">
         <Image
-          src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1920&h=1080&fit=crop"
-          alt="BALNZ team helping clients"
+          src="/images/about_coach.png"
+          alt="BALNZ about page hero"
           fill
           className="object-cover"
           priority
@@ -77,7 +77,7 @@ export default function AboutPage() {
                 About BALNZ
               </h1>
               <p className="mt-6 text-xl text-white/90">
-                Helping people move with confidence since 2010.
+                Science-based. Confidence-building. Movement for life.
               </p>
             </div>
           </div>
@@ -107,8 +107,8 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 items-center">
             <div className="relative h-[500px] rounded-3xl overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=1000&fit=crop"
-                alt="Founder Dr. Emily Chen with client"
+                src="/images/about_coach.png"
+                alt="BALNZ story"
                 fill
                 className="object-cover"
               />
@@ -118,13 +118,23 @@ export default function AboutPage() {
                 Our Story
               </h2>
               <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-                BALNZ was founded in 2010 by Dr. Emily Chen after witnessing her grandmother 
-                struggle with balance issues that led to a life-altering fall.
+                BALNZ was born from a real-life event that revealed how quickly a
+                fall can change a family’s life. After witnessing his mother lose
+                her balance and fall, Daniel began to study how common—and how
+                dangerous—falls can be for older adults.
               </p>
               <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-                What started as a small practice has grown into a comprehensive wellness 
-                organization serving thousands through in-person sessions, workplace programs, 
-                and home training.
+                As a physical therapist, Daniel worked across sports and
+                geriatrics and discovered something powerful: older adults need
+                the same movement principles as athletes, delivered with safety,
+                simplicity, and compassion. That insight became the foundation of
+                BALNZ.
+              </p>
+              <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+                Today, BALNZ is a comprehensive, science-based system that blends
+                physical therapy, neuroscience, Tai Chi principles, and
+                yoga-inspired control to help people of all ages move with more
+                confidence.
               </p>
               <Button asChild size="lg" className="mt-8">
                 <Link href="/contact">Get in Touch</Link>
@@ -141,6 +151,9 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               Our Values
             </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Clear principles guide every BALNZ program and service.
+            </p>
           </div>
           <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
             {values.map((value, index) => (
@@ -166,8 +179,11 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Meet Our Team
+              The BALNZ Foundation
             </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              The mission, method, and message behind BALNZ.
+            </p>
           </div>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {team.map((member, index) => (
@@ -194,8 +210,8 @@ export default function AboutPage() {
       {/* CTA Section - Background Image */}
       <section className="relative py-24 lg:py-32">
         <Image
-          src="https://images.unsplash.com/photo-1518459031867-a89b944bffe4?w=1920&h=800&fit=crop"
-          alt="Training session"
+          src="/images/cta_background.png"
+          alt="BALNZ movement training"
           fill
           className="object-cover"
         />
@@ -203,10 +219,10 @@ export default function AboutPage() {
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl">
-              Join the BALNZ Family
+              Move With Confidence
             </h2>
             <p className="mt-6 text-xl text-primary-foreground/90">
-              Start your journey to better balance today.
+              Take your first step toward stronger, steadier, safer movement.
             </p>
             <Button asChild size="lg" variant="secondary" className="mt-10 text-lg px-8 py-6">
               <Link href="/contact">Get in Touch</Link>

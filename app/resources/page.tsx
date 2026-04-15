@@ -4,122 +4,137 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
-import { FileText, PlayCircle, HelpCircle, BookOpen, Download, ChevronDown, ChevronUp, X } from "lucide-react"
+import { FileText, PlayCircle, HelpCircle, BookOpen, Download, ChevronDown, X } from "lucide-react"
 import { useState, useRef, useEffect } from "react"
 
 const guides = [
   {
-    title: "Balance Assessment Guide",
-    type: "PDF Guide",
-    description: "Comprehensive self-assessment tools",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop",
+    title: "Home Safety Checklist",
+    type: "Printable Guide",
+    description: "A room-by-room guide to reducing fall risks at home.",
+    image: "/images/resource_guide.png",
     downloadUrl: "https://www.w3.org/WAI/WCAG21/Techniques/pdf/img/table-word.pdf",
   },
   {
-    title: "Fall Prevention Checklist",
-    type: "PDF Checklist",
-    description: "Home safety evaluation guide",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop",
+    title: "Beginner Balance Routine",
+    type: "Printable Routine",
+    description: "Simple step-by-step exercises using a chair or countertop.",
+    image: "/images/resource_routine.png",
     downloadUrl: "https://www.w3.org/WAI/WCAG21/Techniques/pdf/img/table-word.pdf",
   },
   {
-    title: "5-Minute Daily Routine",
-    type: "PDF Guide",
-    description: "Quick exercises for every morning",
-    image: "https://images.unsplash.com/photo-1518459031867-a89b944bffe4?w=600&h=400&fit=crop",
+    title: "Daily Balance Tracker",
+    type: "Printable Tracker",
+    description: "A simple way to notice patterns in steadiness and confidence.",
+    image: "/images/resource_check.png",
     downloadUrl: "https://www.w3.org/WAI/WCAG21/Techniques/pdf/img/table-word.pdf",
   },
   {
-    title: "Nutrition for Balance",
-    type: "PDF Guide",
-    description: "Foods that support stability",
-    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&h=400&fit=crop",
+    title: "Weekly Movement Planner",
+    type: "Printable Planner",
+    description: "Build consistency and stay motivated through the week.",
+    image: "/images/programs_workplace.png",
     downloadUrl: "https://www.w3.org/WAI/WCAG21/Techniques/pdf/img/table-word.pdf",
   },
 ]
 
 const videos = [
   {
-    title: "Beginner Balance Exercises",
-    duration: "3:47",
-    description: "Start your balance journey here",
-    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&h=400&fit=crop",
+    title: "5-Minute Warm-Up for Stability",
+    duration: "5:00",
+    description: "A gentle warm-up to prepare the body for safe movement.",
+    image: "/images/programs_home.png",
     videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
   },
   {
-    title: "Chair-Based Routine",
-    duration: "2:30",
-    description: "Safe seated exercises",
-    image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&h=400&fit=crop",
+    title: "Beginner Tai Chi Flow",
+    duration: "4:20",
+    description: "Slow, controlled movements to improve awareness and calm.",
+    image: "/images/services_group.png",
     videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
   },
   {
-    title: "Standing Progressions",
-    duration: "4:15",
-    description: "Build confidence on your feet",
-    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&h=400&fit=crop",
+    title: "Safe Turning Techniques",
+    duration: "3:15",
+    description: "Simple techniques to help you stay steady during turns.",
+    image: "/images/programs_athlete.png",
     videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
   },
   {
-    title: "Core Strength Training",
-    duration: "5:00",
-    description: "Strengthen your foundation",
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=400&fit=crop",
+    title: "Daily Mobility Routine",
+    duration: "6:00",
+    description: "A gentle full-body routine to reduce stiffness and support balance.",
+    image: "/images/programs_senior.png",
     videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
   },
 ]
 
 const faqs = [
   {
-    question: "How often should I practice balance exercises?",
-    answer: "We recommend practicing at least 3-4 times per week. Even short daily sessions of 5-10 minutes can make a significant difference in your stability and confidence. Consistency is key to seeing results.",
+    question: "What is BALNZ?",
+    answer:
+      "BALNZ is a science-based balance training system created to help people improve stability, reduce fall risk, and move with confidence. It blends physical therapy, neuroscience, Tai Chi principles, and yoga-inspired control.",
   },
   {
-    question: "Is it normal to feel unsteady when starting?",
-    answer: "Yes, this is completely normal. Balance training challenges your body in new ways, and it takes time for your neuromuscular system to adapt. Always prioritize safety by staying near a wall or sturdy surface when starting out.",
+    question: "Who are these resources for?",
+    answer:
+      "These resources are designed for seniors who want to stay independent, adults who feel unsteady, family members supporting aging parents, caregivers, and anyone beginning a balance-training journey.",
   },
   {
-    question: "Can balance training help after a fall?",
-    answer: "Absolutely. Balance training is one of the most effective ways to prevent future falls and rebuild confidence after an incident. Our programs are specifically designed to progressively restore your stability and reduce fall risk.",
+    question: "Do I need experience or special equipment?",
+    answer:
+      "No. Most BALNZ resources are built for beginners and use simple support like a chair, wall, or countertop. No gym equipment or previous experience is required.",
   },
   {
-    question: "How long until I see results?",
-    answer: "Many people notice improvements within 2-4 weeks of consistent practice. Significant changes in balance, coordination, and confidence typically occur within 8-12 weeks. Your progress will depend on your starting point and training frequency.",
+    question: "Is BALNZ safe for beginners or older adults?",
+    answer:
+      "Yes. BALNZ resources are designed to be gentle, accessible, and grounded in physical therapy principles. Safety is the foundation of every routine, especially for seniors and beginners.",
   },
   {
-    question: "Do I need any special equipment?",
-    answer: "No special equipment is required to start. Most of our exercises use bodyweight only. As you progress, simple items like resistance bands or balance pads can be added, but they are optional.",
+    question: "How do I know where to start?",
+    answer:
+      "A good place to begin is with the Home Safety Checklist, Balance Self-Check, or Beginner Balance Routine. These simple tools help you build awareness, confidence, and a safe starting point.",
   },
 ]
 
 const blogPosts = [
   {
-    title: "Understanding the Science of Balance",
-    excerpt: "Discover how your vestibular system, vision, and proprioception work together.",
-    date: "March 15, 2026",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=500&fit=crop",
+    title: "Why Balance Declines After 50",
+    excerpt: "A clear explanation of the physical and neurological changes that affect stability—and what can help.",
+    date: "BALNZ Guide",
+    image: "/images/programs_senior.png",
   },
   {
-    title: "Top 10 Balance Exercises for Seniors",
-    excerpt: "Simple, effective exercises you can do at home.",
-    date: "March 8, 2026",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=500&fit=crop",
+    title: "Understanding Fall Risk",
+    excerpt: "Learn the most common causes of falls and how simple changes can reduce risk.",
+    date: "BALNZ Guide",
+    image: "/images/services_education.png",
   },
   {
-    title: "How Desk Work Affects Your Balance",
-    excerpt: "The hidden impact of sedentary work on your stability.",
-    date: "February 28, 2026",
-    image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&h=500&fit=crop",
+    title: "How Balance Training Works",
+    excerpt: "An introduction to the BALNZ method and how science-based movement supports confidence.",
+    date: "BALNZ Guide",
+    image: "/images/hero_home.png",
   },
   {
-    title: "Balance Training for Athletes",
-    excerpt: "How improved balance enhances athletic performance.",
-    date: "February 20, 2026",
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=500&fit=crop",
+    title: "Medication & Dizziness Awareness",
+    excerpt: "A simple awareness guide to help notice habits or factors that may affect balance.",
+    date: "BALNZ Guide",
+    image: "/images/resource_check.png",
   },
 ]
 
-function FAQItem({ question, answer, isOpen, onToggle }: { question: string; answer: string; isOpen: boolean; onToggle: () => void }) {
+function FAQItem({
+  question,
+  answer,
+  isOpen,
+  onToggle,
+}: {
+  question: string
+  answer: string
+  isOpen: boolean
+  onToggle: () => void
+}) {
   return (
     <div className="border-b border-border">
       <button
@@ -128,12 +143,18 @@ function FAQItem({ question, answer, isOpen, onToggle }: { question: string; ans
         aria-expanded={isOpen}
       >
         <span className="text-lg font-medium text-foreground pr-4">{question}</span>
-        <div className={`flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 flex-shrink-0 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}>
+        <div
+          className={`flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 flex-shrink-0 transition-transform duration-200 ${
+            isOpen ? "rotate-180" : ""
+          }`}
+        >
           <ChevronDown className="h-5 w-5 text-primary" />
         </div>
       </button>
-      <div 
-        className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? "max-h-96 pb-5" : "max-h-0"}`}
+      <div
+        className={`overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen ? "max-h-96 pb-5" : "max-h-0"
+        }`}
       >
         <p className="text-base text-muted-foreground leading-relaxed">{answer}</p>
       </div>
@@ -141,7 +162,13 @@ function FAQItem({ question, answer, isOpen, onToggle }: { question: string; ans
   )
 }
 
-function VideoModal({ video, onClose }: { video: typeof videos[0]; onClose: () => void }) {
+function VideoModal({
+  video,
+  onClose,
+}: {
+  video: typeof videos[0]
+  onClose: () => void
+}) {
   const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
@@ -153,13 +180,8 @@ function VideoModal({ video, onClose }: { video: typeof videos[0]; onClose: () =
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
-      {/* Backdrop */}
-      <div 
-        className="absolute inset-0 bg-black/80 backdrop-blur-sm"
-        onClick={onClose}
-      />
-      
-      {/* Modal */}
+      <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={onClose} />
+
       <div className="relative z-10 w-full max-w-4xl mx-4">
         <button
           onClick={onClose}
@@ -168,15 +190,9 @@ function VideoModal({ video, onClose }: { video: typeof videos[0]; onClose: () =
         >
           <X className="h-8 w-8" />
         </button>
-        
+
         <div className="bg-black rounded-2xl overflow-hidden shadow-2xl">
-          <video
-            ref={videoRef}
-            src={video.videoUrl}
-            controls
-            autoPlay
-            className="w-full aspect-video"
-          >
+          <video ref={videoRef} src={video.videoUrl} controls autoPlay className="w-full aspect-video">
             Your browser does not support the video tag.
           </video>
           <div className="p-4 bg-foreground">
@@ -208,7 +224,7 @@ export default function ResourcesPage() {
       {/* Hero Section */}
       <section className="relative h-[50vh] min-h-[350px]">
         <Image
-          src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1920&h=1080&fit=crop"
+          src="/images/cta_background.png"
           alt="BALNZ resources"
           fill
           className="object-cover"
@@ -219,10 +235,10 @@ export default function ResourcesPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8 w-full">
             <div className="max-w-2xl">
               <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
-                Free Resources
+                Resources Library
               </h1>
               <p className="mt-4 text-xl text-white/90">
-                Guides, videos, and articles to support your balance journey.
+                Free tools to help you move with confidence.
               </p>
             </div>
           </div>
@@ -238,15 +254,17 @@ export default function ResourcesPage() {
             </div>
             <div>
               <h2 className="text-3xl font-bold tracking-tight text-foreground">
-                Downloadable Guides
+                Printable Tools
               </h2>
-              <p className="text-muted-foreground mt-1">Click to download PDF guides</p>
+              <p className="text-muted-foreground mt-1">
+                Click to download simple, practical BALNZ resources.
+              </p>
             </div>
           </div>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {guides.map((guide, index) => (
-              <Card 
-                key={index} 
+              <Card
+                key={index}
                 className="bg-card overflow-hidden hover:shadow-xl transition-all duration-300 group cursor-pointer border-0 shadow-lg"
                 onClick={() => handleDownload(guide.downloadUrl, `${guide.title}.pdf`)}
               >
@@ -290,18 +308,16 @@ export default function ResourcesPage() {
             </div>
             <div>
               <h2 className="text-3xl font-bold tracking-tight text-foreground">
-                Exercise Videos
+                Videos & Demonstrations
               </h2>
-              <p className="text-muted-foreground mt-1">Click to watch and follow along</p>
+              <p className="text-muted-foreground mt-1">
+                Click to watch simple movement guidance and routines.
+              </p>
             </div>
           </div>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {videos.map((video, index) => (
-              <div 
-                key={index} 
-                className="group cursor-pointer"
-                onClick={() => setActiveVideo(video)}
-              >
+              <div key={index} className="group cursor-pointer" onClick={() => setActiveVideo(video)}>
                 <div className="relative h-52 rounded-2xl overflow-hidden shadow-lg">
                   <Image
                     src={video.image}
@@ -319,7 +335,9 @@ export default function ResourcesPage() {
                   </div>
                 </div>
                 <div className="mt-4">
-                  <h3 className="font-semibold text-foreground text-lg group-hover:text-primary transition-colors">{video.title}</h3>
+                  <h3 className="font-semibold text-foreground text-lg group-hover:text-primary transition-colors">
+                    {video.title}
+                  </h3>
                   <p className="text-sm text-muted-foreground mt-1">{video.description}</p>
                 </div>
               </div>
@@ -334,7 +352,7 @@ export default function ResourcesPage() {
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 items-start">
             <div className="relative h-[450px] lg:h-[550px] rounded-3xl overflow-hidden lg:sticky lg:top-24 shadow-xl">
               <Image
-                src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=1000&fit=crop"
+                src="/images/about_coach.png"
                 alt="Fitness professional helping with balance exercises"
                 fill
                 className="object-cover"
@@ -352,9 +370,9 @@ export default function ResourcesPage() {
               </div>
               <div className="bg-card rounded-2xl p-2 shadow-lg">
                 {faqs.map((faq, index) => (
-                  <FAQItem 
-                    key={index} 
-                    question={faq.question} 
+                  <FAQItem
+                    key={index}
+                    question={faq.question}
                     answer={faq.answer}
                     isOpen={openFaq === index}
                     onToggle={() => setOpenFaq(openFaq === index ? null : index)}
@@ -374,16 +392,12 @@ export default function ResourcesPage() {
               <BookOpen className="h-6 w-6 text-primary" />
             </div>
             <h2 className="text-3xl font-bold tracking-tight text-foreground">
-              Latest Articles
+              Educational Guides
             </h2>
           </div>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {blogPosts.map((post, index) => (
-              <Link 
-                key={index} 
-                href="#"
-                className="group"
-              >
+              <Link key={index} href="#" className="group">
                 <div className="relative h-64 rounded-2xl overflow-hidden shadow-lg">
                   <Image
                     src={post.image}
@@ -394,7 +408,9 @@ export default function ResourcesPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
                   <div className="absolute bottom-6 left-6 right-6">
                     <span className="text-white/80 text-sm">{post.date}</span>
-                    <h3 className="mt-1 text-xl font-bold text-white group-hover:text-white/90 transition-colors">{post.title}</h3>
+                    <h3 className="mt-1 text-xl font-bold text-white group-hover:text-white/90 transition-colors">
+                      {post.title}
+                    </h3>
                     <p className="mt-2 text-white/70 text-sm line-clamp-2">{post.excerpt}</p>
                   </div>
                 </div>
@@ -407,7 +423,7 @@ export default function ResourcesPage() {
       {/* CTA Section */}
       <section className="relative py-20 lg:py-28">
         <Image
-          src="https://images.unsplash.com/photo-1518459031867-a89b944bffe4?w=1920&h=800&fit=crop"
+          src="/images/cta_background.png"
           alt="Training session"
           fill
           className="object-cover"
@@ -416,10 +432,10 @@ export default function ResourcesPage() {
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Want Personalized Guidance?
+              Start With What You Need Most
             </h2>
             <p className="mt-4 text-xl text-white/90">
-              Schedule a free consultation with our balance experts.
+              Whether you want to make your home safer, begin a gentle routine, or learn more about balance, BALNZ gives you tools you can use today.
             </p>
             <Button asChild size="lg" variant="secondary" className="mt-8 text-lg px-8 py-6 rounded-xl shadow-lg">
               <Link href="/contact">Get Started</Link>
@@ -429,12 +445,7 @@ export default function ResourcesPage() {
       </section>
 
       {/* Video Modal */}
-      {activeVideo && (
-        <VideoModal 
-          video={activeVideo} 
-          onClose={() => setActiveVideo(null)} 
-        />
-      )}
+      {activeVideo && <VideoModal video={activeVideo} onClose={() => setActiveVideo(null)} />}
     </div>
   )
 }

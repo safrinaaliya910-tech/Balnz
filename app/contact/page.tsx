@@ -11,33 +11,33 @@ import { useState } from "react"
 const contactInfo = [
   {
     icon: MapPin,
-    title: "Visit Us",
-    details: ["123 Balance Street", "Portland, OR 97201"],
+    title: "Location",
+    details: ["Austin, Texas", "Serving locally and online"],
   },
   {
     icon: Phone,
-    title: "Call Us",
-    details: ["(503) 555-0123"],
+    title: "Response Time",
+    details: ["Within 1–2 business days"],
   },
   {
     icon: Mail,
-    title: "Email Us",
-    details: ["hello@balnz.com"],
+    title: "General Inquiries",
+    details: ["info@balnz.com"],
   },
   {
     icon: Clock,
-    title: "Hours",
-    details: ["Mon-Fri: 8am-6pm", "Sat: 9am-2pm"],
+    title: "Stay Connected",
+    details: ["Instagram • Facebook", "YouTube • LinkedIn"],
   },
 ]
 
 const interests = [
-  "Senior Balance Program",
-  "Workplace Mobility Program",
-  "Athlete Stability Program",
-  "Home Training Program",
-  "Corporate Programs",
   "General Inquiry",
+  "Balance Assessment or Training Session",
+  "Workplace Program",
+  "Community Workshop or Event",
+  "Media or Collaboration",
+  "Resources or Programs",
 ]
 
 export default function ContactPage() {
@@ -74,7 +74,7 @@ export default function ContactPage() {
       {/* Hero Section - Full width image */}
       <section className="relative h-[50vh] min-h-[350px]">
         <Image
-          src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1920&h=1080&fit=crop"
+          src="/images/contact_support.png"
           alt="Contact BALNZ"
           fill
           className="object-cover"
@@ -85,10 +85,10 @@ export default function ContactPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8 w-full">
             <div className="max-w-2xl">
               <h1 className="text-5xl font-bold tracking-tight text-white sm:text-6xl">
-                Contact Us
+                Get in Touch with BALNZ
               </h1>
               <p className="mt-6 text-xl text-white/90">
-                Ready to start your balance journey?
+                Connect with us for questions, booking requests, or collaboration opportunities.
               </p>
             </div>
           </div>
@@ -125,16 +125,16 @@ export default function ContactPage() {
             {/* Image Side */}
             <div className="relative h-[600px] rounded-3xl overflow-hidden lg:sticky lg:top-24">
               <Image
-                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=1200&fit=crop"
+                src="/images/about_coach.png"
                 alt="BALNZ team"
                 fill
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
               <div className="absolute bottom-8 left-8 right-8">
-                <h3 className="text-2xl font-bold text-white">Get in Touch</h3>
+                <h3 className="text-2xl font-bold text-white">We’re Here to Help</h3>
                 <p className="mt-2 text-white/90">
-                  Our team is ready to help you find the perfect program.
+                  Whether you’re just beginning your balance journey or looking to bring BALNZ to your community, reaching out is the first step.
                 </p>
               </div>
             </div>
@@ -147,7 +147,7 @@ export default function ContactPage() {
                   <CardContent className="p-8 text-center">
                     <div className="relative h-32 w-32 mx-auto mb-6 rounded-full overflow-hidden">
                       <Image
-                        src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=200&h=200&fit=crop"
+                        src="/images/testimonial_2.png"
                         alt="Thank you"
                         fill
                         className="object-cover"
@@ -155,7 +155,7 @@ export default function ContactPage() {
                     </div>
                     <h3 className="text-xl font-semibold text-foreground">Thank You!</h3>
                     <p className="mt-2 text-muted-foreground">
-                      We will get back to you within 24 hours.
+                      We will get back to you within 1–2 business days.
                     </p>
                     <Button
                       onClick={() => {
@@ -226,7 +226,7 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <label htmlFor="phone" className="block text-base font-medium text-foreground mb-2">
-                          Phone (Optional)
+                          Preferred Contact Method / Phone (Optional)
                         </label>
                         <Input
                           type="tel"
@@ -239,7 +239,7 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <label htmlFor="interest" className="block text-base font-medium text-foreground mb-2">
-                          I am interested in
+                          I am reaching out about
                         </label>
                         <select
                           id="interest"
@@ -268,7 +268,7 @@ export default function ContactPage() {
                           value={formData.message}
                           onChange={handleChange}
                           required
-                          placeholder="Tell us about your goals..."
+                          placeholder="Tell us about your goals, questions, or the type of support you need..."
                           className="text-base resize-none"
                         />
                       </div>
@@ -292,7 +292,7 @@ export default function ContactPage() {
       {/* CTA Section - Background Image */}
       <section className="relative py-24 lg:py-32">
         <Image
-          src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1920&h=800&fit=crop"
+          src="/images/cta_background.png"
           alt="Training session"
           fill
           className="object-cover"
@@ -301,13 +301,13 @@ export default function ContactPage() {
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl">
-              Prefer to Talk?
+              Ready to Take the First Step?
             </h2>
             <p className="mt-6 text-xl text-primary-foreground/90">
-              Call us directly at (503) 555-0123
+              BALNZ is ready to support you with stronger, steadier movement.
             </p>
             <Button asChild size="lg" variant="secondary" className="mt-10 text-lg px-8 py-6">
-              <a href="tel:+15035550123">Call Now</a>
+              <a href="mailto:info@balnz.com">Email BALNZ</a>
             </Button>
           </div>
         </div>

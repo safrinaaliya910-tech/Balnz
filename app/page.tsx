@@ -6,91 +6,94 @@ import { ArrowRight, Star, Play, Download, FileText } from "lucide-react"
 
 const programs = [
   {
-    title: "Senior Balance",
-    description: "Gentle exercises for stability and fall prevention.",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop",
+    title: "Senior Balance & Fall Prevention",
+    description: "Gentle, effective routines to stay steady, confident, and independent.",
+    image: "/images/programs_senior.png",
     href: "/programs#senior",
   },
   {
-    title: "Workplace Mobility",
-    description: "Combat desk fatigue and improve posture.",
-    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&h=600&fit=crop",
+    title: "Workplace Balance & Mobility",
+    description: "Reduce strain, improve posture, and move better throughout the day.",
+    image: "/images/programs_workplace.png",
     href: "/programs#workplace",
   },
   {
-    title: "Athlete Stability",
-    description: "Advanced training for peak performance.",
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=600&fit=crop",
+    title: "Athlete Agility & Stability",
+    description: "Enhance performance, coordination, and injury-resistant movement.",
+    image: "/images/programs_athlete.png",
     href: "/programs#athlete",
   },
   {
-    title: "Home Training",
-    description: "Flexible programs from the comfort of home.",
-    image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&h=600&fit=crop",
+    title: "At-Home Balance Training",
+    description: "Simple, safe routines you can do confidently in your own space.",
+    image: "/images/programs_home.png",
     href: "/programs#home",
   },
 ]
 
 const services = [
   {
-    title: "Personal Training",
-    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&h=400&fit=crop",
+    title: "Balance Assessments",
+    image: "/images/services_oneonone.png",
     href: "/services",
   },
   {
-    title: "Group Classes",
-    image: "https://images.unsplash.com/photo-1518459031867-a89b944bffe4?w=600&h=400&fit=crop",
+    title: "Small Group Classes",
+    image: "/images/services_group.png",
     href: "/services",
   },
   {
-    title: "Virtual Sessions",
-    image: "https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=600&h=400&fit=crop",
+    title: "Community Workshops",
+    image: "/images/services_education.png",
     href: "/services",
   },
 ]
 
 const testimonials = [
   {
-    content: "After just 8 weeks, I feel so much more confident. The exercises are easy to follow.",
-    author: "Margaret T.",
-    role: "Senior Balance Program",
-    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=200&h=200&fit=crop",
+    content:
+      "I feel more confident walking around my home. BALNZ made balance training simple and doable.",
+    author: "Maria, 72",
+    role: "BALNZ Participant",
+    image: "/images/testimonial_1.png",
     rating: 5,
   },
   {
-    content: "Our office saw a significant decrease in back pain complaints. Highly recommend!",
-    author: "David L.",
-    role: "HR Director",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop",
+    content:
+      "The exercises are gentle but effective. I didn’t realize how much my balance could improve.",
+    author: "James, 58",
+    role: "BALNZ Participant",
+    image: "/images/testimonial_2.png",
     rating: 5,
   },
   {
-    content: "The Athlete Stability program improved my form and prevented injuries.",
-    author: "Sarah K.",
-    role: "Athlete Stability Program",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop",
+    content:
+      "As a PT, I recommend BALNZ to clients who want safe, practical routines they can do at home.",
+    author: "Lauren",
+    role: "Physical Therapist",
+    image: "/images/testimonial_3.png",
     rating: 5,
   },
 ]
 
 const resources = [
   {
-    title: "Balance Assessment Guide",
-    type: "PDF Guide",
+    title: "Home Safety Checklist",
+    type: "Printable Guide",
     icon: FileText,
-    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop",
+    image: "/images/resource_guide.png",
   },
   {
-    title: "5-Minute Daily Routine",
-    type: "Video",
+    title: "Balance Self-Check",
+    type: "Self-Check",
     icon: Play,
-    image: "https://images.unsplash.com/photo-1518459031867-a89b944bffe4?w=400&h=300&fit=crop",
+    image: "/images/resource_check.png",
   },
   {
-    title: "Fall Prevention Checklist",
+    title: "Beginner Balance Routine",
     type: "Download",
     icon: Download,
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
+    image: "/images/resource_routine.png",
   },
 ]
 
@@ -107,32 +110,44 @@ export default function HomePage() {
               <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-5xl xl:text-6xl text-balance">
                 Strong. Steady. Safe.
               </h1>
-              
+
               {/* Subtext */}
               <p className="mt-5 text-base leading-7 text-muted-foreground lg:text-lg max-w-sm mx-auto lg:mx-0">
-                Professional balance and mobility training for a confident, independent life.
+                Balance is the foundation of every confident step. BALNZ helps
+                you stay strong, steady, and safe with simple, science-based
+                training designed for everyday life.
               </p>
-              
+
               {/* Buttons */}
               <div className="mt-8 flex flex-col gap-3 justify-center lg:justify-start">
-                <Button asChild size="lg" className="text-base px-6 py-5 rounded-xl shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 transition-all">
-                  <Link href="/programs">Explore Programs</Link>
+                <Button
+                  asChild
+                  size="lg"
+                  className="text-base px-6 py-5 rounded-xl shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 transition-all"
+                >
+                  <Link href="/contact">Get Started</Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="text-base px-6 py-5 rounded-xl border-2 bg-white hover:bg-secondary transition-all">
-                  <Link href="/contact">Free Consultation</Link>
+                <Button
+                  asChild
+                  variant="outline"
+                  size="lg"
+                  className="text-base px-6 py-5 rounded-xl border-2 bg-white hover:bg-secondary transition-all"
+                >
+                  <Link href="/resources">Take a Balance Test</Link>
                 </Button>
               </div>
             </div>
-            
+
             {/* Right Side - Extra Large Cut-out Image (70% = 7/10) */}
-<div className="relative order-1 lg:order-2 lg:col-span-7 flex justify-center items-center"><div className="relative w-full flex justify-center items-center">  
-  <Image
-  src="https://i.ibb.co/Fb2WYBHx/BP4-removebg-preview.png"
-  alt="Balance training"
-  width={800}
-  height={1000}
-  priority
-className="
+            <div className="relative order-1 lg:order-2 lg:col-span-7 flex justify-center items-center">
+              <div className="relative w-full flex justify-center items-center">
+                <Image
+                  src="https://i.ibb.co/Fb2WYBHx/BP4-removebg-preview.png"
+                  alt="Balance training"
+                  width={800}
+                  height={1000}
+                  priority
+                  className="
   block
   mx-auto
 
@@ -142,12 +157,12 @@ className="
   object-contain
   h-auto
 "
-/>
+                />
               </div>
             </div>
           </div>
         </div>
-        
+
         {/* Decorative Elements */}
         <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-background to-transparent pointer-events-none" />
       </section>
@@ -160,7 +175,7 @@ className="
               Our Programs
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Specialized training for every stage of life.
+              Training for every stage of life.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -176,7 +191,9 @@ className="
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
                     <div className="absolute bottom-4 left-4 right-4">
-                      <h3 className="text-xl font-bold text-white">{program.title}</h3>
+                      <h3 className="text-xl font-bold text-white">
+                        {program.title}
+                      </h3>
                     </div>
                   </div>
                   <CardContent className="p-4">
@@ -197,10 +214,10 @@ className="
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Our Services
+              What We Do
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Multiple ways to train with BALNZ.
+              Better balance for every body.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -215,7 +232,9 @@ className="
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/20 to-transparent" />
                   <div className="absolute bottom-6 left-6 right-6">
-                    <h3 className="text-2xl font-bold text-white">{service.title}</h3>
+                    <h3 className="text-2xl font-bold text-white">
+                      {service.title}
+                    </h3>
                     <span className="mt-2 inline-flex items-center text-white/90 font-medium">
                       View details <ArrowRight className="ml-2 h-4 w-4" />
                     </span>
@@ -233,7 +252,7 @@ className="
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 items-center">
             <div className="relative h-[500px] rounded-3xl overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=1000&fit=crop"
+                src="/images/programs_home.png"
                 alt="Balance training in action"
                 fill
                 className="object-cover"
@@ -246,21 +265,30 @@ className="
               <div className="mt-8 space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <span className="text-2xl font-bold text-primary">40%</span>
+                    <span className="text-2xl font-bold text-primary">1</span>
                   </div>
-                  <p className="text-lg text-muted-foreground">Reduction in fall risk with proper training</p>
+                  <p className="text-lg text-muted-foreground">
+                    Balance affects walking, stairs, reaching, and everyday
+                    movement.
+                  </p>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <span className="text-2xl font-bold text-primary">8</span>
+                    <span className="text-2xl font-bold text-primary">2</span>
                   </div>
-                  <p className="text-lg text-muted-foreground">Weeks to see significant improvement</p>
+                  <p className="text-lg text-muted-foreground">
+                    Training balance helps reduce fall risk and supports
+                    independence.
+                  </p>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <span className="text-2xl font-bold text-primary">95%</span>
+                    <span className="text-2xl font-bold text-primary">3</span>
                   </div>
-                  <p className="text-lg text-muted-foreground">Client satisfaction rate</p>
+                  <p className="text-lg text-muted-foreground">
+                    Small improvements can make a big difference in confidence
+                    and mobility.
+                  </p>
                 </div>
               </div>
               <Button asChild size="lg" className="mt-10">
@@ -279,7 +307,7 @@ className="
               Free Resources
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Start your balance journey today.
+              Learn, practice, and improve at home.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -298,8 +326,12 @@ className="
                     </div>
                   </div>
                   <CardContent className="p-5">
-                    <span className="text-sm font-medium text-primary">{resource.type}</span>
-                    <h3 className="mt-1 text-lg font-semibold text-foreground">{resource.title}</h3>
+                    <span className="text-sm font-medium text-primary">
+                      {resource.type}
+                    </span>
+                    <h3 className="mt-1 text-lg font-semibold text-foreground">
+                      {resource.title}
+                    </h3>
                   </CardContent>
                 </Card>
               </Link>
@@ -307,7 +339,7 @@ className="
           </div>
           <div className="mt-12 text-center">
             <Button asChild variant="outline" size="lg">
-              <Link href="/resources">View All Resources</Link>
+              <Link href="/resources">Explore Resources</Link>
             </Button>
           </div>
         </div>
@@ -318,7 +350,7 @@ className="
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              What Our Clients Say
+              Real People. Real Progress.
             </h2>
           </div>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -342,8 +374,12 @@ className="
                     />
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground">{testimonial.author}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                    <p className="font-semibold text-foreground">
+                      {testimonial.author}
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      {testimonial.role}
+                    </p>
                   </div>
                 </div>
               </Card>
@@ -355,7 +391,7 @@ className="
       {/* CTA Section - Background Image */}
       <section className="relative py-24 lg:py-32">
         <Image
-          src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1920&h=800&fit=crop"
+          src="/images/cta_background.png"
           alt="Training session"
           fill
           className="object-cover"
@@ -364,16 +400,26 @@ className="
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl">
-              Ready to Find Your Balance?
+              Ready to Feel More Steady?
             </h2>
             <p className="mt-6 text-xl text-primary-foreground/90">
-              Schedule a free consultation today.
+              Take your first step toward better balance today.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button asChild size="lg" variant="secondary" className="text-lg px-8 py-6">
-                <Link href="/contact">Get Started</Link>
+              <Button
+                asChild
+                size="lg"
+                variant="secondary"
+                className="text-lg px-8 py-6"
+              >
+                <Link href="/contact">Get Started with BALNZ</Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="text-lg px-8 py-6 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+              >
                 <Link href="/programs">View Programs</Link>
               </Button>
             </div>

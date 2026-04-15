@@ -6,78 +6,78 @@ import { CheckCircle } from "lucide-react"
 
 const services = [
   {
-    title: "Individual Assessment",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop",
-    price: "Starting at $150",
+    title: "Individual Balance Assessments",
+    image: "/images/services_oneonone.png", // 👤 assessment feel
+    price: "BT-Tracks testing, posture analysis, and fall-risk screening",
   },
   {
-    title: "One-on-One Training",
-    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&h=400&fit=crop",
-    price: "Starting at $85/session",
+    title: "One-on-One Balance Training",
+    image: "/images/services_oneonone.png", // 👨‍⚕️ personal training
+    price: "Private sessions tailored to goals, ability, and comfort level",
   },
   {
-    title: "Virtual Sessions",
-    image: "https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=600&h=400&fit=crop",
-    price: "Starting at $65/session",
+    title: "Small Group Classes",
+    image: "/images/services_group.png", // 👥 group training
+    price: "Supportive group training with individualized attention",
   },
   {
-    title: "Group Classes",
-    image: "https://images.unsplash.com/photo-1518459031867-a89b944bffe4?w=600&h=400&fit=crop",
-    price: "Starting at $25/class",
+    title: "Workplace Balance & Mobility Programs",
+    image: "/images/programs_workplace.png", // 💻 workplace
+    price: "On-site or virtual sessions for healthier workplace movement",
   },
   {
-    title: "Corporate Programs",
-    image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&h=400&fit=crop",
-    price: "Custom pricing",
+    title: "Community Workshops & Events",
+    image: "/images/services_group.png", // 👨‍👩‍👧 community vibe
+    price: "Educational sessions on balance, falls, and safe movement",
   },
   {
-    title: "Home Visits",
-    image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&h=400&fit=crop",
-    price: "Starting at $125/session",
+    title: "Online Training & Digital Resources",
+    image: "/images/resource_routine.png", // 📱 home/digital learning
+    price: "Flexible at-home learning with videos, guides, and routines",
   },
 ]
 
 const packages = [
   {
-    name: "Starter",
-    price: "$399",
-    description: "Perfect for beginners",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop",
+    name: "Assessment & Awareness",
+    price: "Great Starting Point",
+    description: "Understand balance, stability, and fall risk",
+    image: "/images/services_oneonone.png", // 👤 evaluation
     features: [
-      "Initial assessment",
-      "4 one-on-one sessions",
-      "Personalized exercise plan",
-      "Email support",
+      "Evidence-based balance evaluation",
+      "BT-Tracks balance testing",
+      "Posture and movement analysis",
+      "Personalized recommendations",
     ],
     popular: false,
   },
   {
-    name: "Foundation",
-    price: "$749",
-    description: "Most popular choice",
-    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&h=600&fit=crop",
+    name: "Training & Support",
+    price: "Most Popular",
+    description: "Guided balance improvement for daily confidence",
+    image: "/images/services_group.png", // 👥 training
     features: [
-      "Comprehensive assessment",
-      "8 one-on-one sessions",
-      "Personalized exercise plan",
-      "Progress reassessment",
-      "Mobile app access (3 months)",
-      "Priority scheduling",
+      "One-on-one training sessions",
+      "Strength and coordination work",
+      "Tai Chi and yoga-inspired control",
+      "Fall-risk reduction strategies",
+      "Safe progressions for all levels",
+      "Confidence-building movement practice",
     ],
     popular: true,
   },
   {
-    name: "Transformation",
-    price: "$1,299",
-    description: "Maximum results",
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=600&fit=crop",
+    name: "Community & Professional Education",
+    price: "Flexible Delivery",
+    description: "Programs for groups, teams, and care communities",
+    image: "/images/services_group.png", // 👨‍👩‍👧 workshops
     features: [
-      "Comprehensive assessment",
-      "12 one-on-one sessions",
-      "Monthly reassessments",
-      "Mobile app access (6 months)",
-      "Home safety assessment",
-      "Family training session",
+      "Small group classes and workshops",
+      "Workplace mobility sessions",
+      "Community education events",
+      "Caregiver and clinician training",
+      "Evidence-based coaching strategies",
+      "Online resources and printable tools",
     ],
     popular: false,
   },
@@ -86,10 +86,10 @@ const packages = [
 export default function ServicesPage() {
   return (
     <div className="flex flex-col">
-      {/* Hero Section - Full width image */}
+      {/* Hero */}
       <section className="relative h-[60vh] min-h-[400px]">
         <Image
-          src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1920&h=1080&fit=crop"
+          src="/images/services_group.png" // 👈 strong trust hero
           alt="BALNZ services"
           fill
           className="object-cover"
@@ -100,24 +100,28 @@ export default function ServicesPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8 w-full">
             <div className="max-w-2xl">
               <h1 className="text-5xl font-bold tracking-tight text-white sm:text-6xl">
-                Our Services
+                Science-Based Balance Training for Every Need
               </h1>
               <p className="mt-6 text-xl text-white/90">
-                Flexible options to fit your lifestyle.
+                Safe, accessible services for individuals, families, communities, and organizations.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Grid - Image Cards */}
+      {/* Services Grid */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               Service Options
             </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Multiple ways to improve balance, reduce fall risk, and build confidence in movement.
+            </p>
           </div>
+
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (
               <Link key={index} href="/contact" className="group">
@@ -144,22 +148,25 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Packages Section - Large Image Cards */}
+      {/* Packages */}
       <section className="py-20 lg:py-28 bg-secondary/50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Training Packages
+              How BALNZ Services Work
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Save with our bundled packages.
+              Every service is built on physical therapy, neuroscience, Tai Chi principles, and yoga-inspired control.
             </p>
           </div>
+
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             {packages.map((pkg, index) => (
-              <Card 
-                key={index} 
-                className={`bg-card overflow-hidden relative ${pkg.popular ? 'ring-2 ring-primary shadow-xl' : ''}`}
+              <Card
+                key={index}
+                className={`bg-card overflow-hidden relative ${
+                  pkg.popular ? "ring-2 ring-primary shadow-xl" : ""
+                }`}
               >
                 {pkg.popular && (
                   <div className="absolute top-4 right-4 z-10">
@@ -168,6 +175,7 @@ export default function ServicesPage() {
                     </span>
                   </div>
                 )}
+
                 <div className="relative h-48 overflow-hidden">
                   <Image
                     src={pkg.image}
@@ -181,8 +189,10 @@ export default function ServicesPage() {
                     <p className="text-white/90">{pkg.description}</p>
                   </div>
                 </div>
+
                 <CardContent className="p-6">
                   <p className="text-4xl font-bold text-foreground">{pkg.price}</p>
+
                   <ul className="mt-6 space-y-3">
                     {pkg.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center gap-3 text-foreground">
@@ -191,9 +201,10 @@ export default function ServicesPage() {
                       </li>
                     ))}
                   </ul>
-                  <Button 
-                    asChild 
-                    className="w-full mt-8" 
+
+                  <Button
+                    asChild
+                    className="w-full mt-8"
                     size="lg"
                     variant={pkg.popular ? "default" : "outline"}
                   >
@@ -206,10 +217,10 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* CTA Section - Background Image */}
+      {/* CTA */}
       <section className="relative py-24 lg:py-32">
         <Image
-          src="https://images.unsplash.com/photo-1518459031867-a89b944bffe4?w=1920&h=800&fit=crop"
+          src="/images/cta_background.png" // 🎯 strong CTA
           alt="Training session"
           fill
           className="object-cover"
@@ -218,10 +229,10 @@ export default function ServicesPage() {
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl">
-              Ready to Get Started?
+              Get Started
             </h2>
             <p className="mt-6 text-xl text-primary-foreground/90">
-              Contact us for a free consultation.
+              Whether you’re looking for personal training, group classes, or community education, BALNZ offers a service that fits your needs.
             </p>
             <Button asChild size="lg" variant="secondary" className="mt-10 text-lg px-8 py-6">
               <Link href="/contact">Schedule Consultation</Link>
