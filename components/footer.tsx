@@ -12,6 +12,7 @@ const navigation = {
     { name: "About BALNZ", href: "/about" },
     { name: "Our Services", href: "/services" },
     { name: "Resources", href: "/resources" },
+    { name: "Store", href: "/store" },
     { name: "Contact", href: "/contact" },
   ],
   resources: [

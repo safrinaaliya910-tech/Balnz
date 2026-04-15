@@ -62,27 +62,30 @@ export default function AboutPage() {
     <div className="flex flex-col">
       {/* Hero Section - Full width image */}
       <section className="relative h-[60vh] min-h-[400px]">
-        <Image
-          src="/images/about_coach.png"
-          alt="BALNZ about page hero"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-foreground/70 to-foreground/30" />
-        <div className="absolute inset-0 flex items-center">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8 w-full">
-            <div className="max-w-2xl">
-              <h1 className="text-5xl font-bold tracking-tight text-white sm:text-6xl">
-                About BALNZ
-              </h1>
-              <p className="mt-6 text-xl text-white/90">
-                Science-based. Confidence-building. Movement for life.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+  <Image
+    src="/images/about.png"
+    alt="BALNZ about page hero"
+    fill
+    priority
+    quality={100}
+    className="object-cover"
+  />
+
+  <div className="absolute inset-0 bg-black/30" />
+
+  <div className="absolute inset-0 flex items-center">
+    <div className="mx-auto max-w-7xl px-6 lg:px-8 w-full">
+      <div className="max-w-2xl">
+        <h1 className="text-5xl font-bold text-white sm:text-6xl">
+          About BALNZ
+        </h1>
+        <p className="mt-6 text-xl text-white/90">
+          Science-based. Confidence-building. Movement for life.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Stats Section */}
       <section className="py-16 bg-primary/5">

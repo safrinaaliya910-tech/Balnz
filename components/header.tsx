@@ -14,7 +14,10 @@ const navigation = [
   { name: "Programs", href: "/programs" },
   { name: "Services", href: "/services" },
   { name: "Resources", href: "/resources" },
-  { name: "Contact", href: "/contact" },
+  { name: "Store", href: "/store" },
+  { name: "Community", href: "/community" },
+  { name: "Contact", href: "/contact" }
+  
 ]
 
 export function Header() {
