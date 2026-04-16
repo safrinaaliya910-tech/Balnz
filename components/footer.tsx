@@ -13,6 +13,7 @@ const navigation = {
     { name: "Our Services", href: "/services" },
     { name: "Resources", href: "/resources" },
     { name: "Store", href: "/store" },
+    { name: "Community", href: "/community" },
     { name: "Contact", href: "/contact" },
   ],
   resources: [
@@ -28,8 +29,8 @@ export function Footer() {
     <footer className="bg-card border-t border-border">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          
-          {/* Brand Section */}
+
+          {/* Brand */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
               <Image
@@ -39,34 +40,37 @@ export function Footer() {
                 height={36}
                 className="h-9 w-auto"
               />
-              <span className="text-2xl font-bold tracking-tight text-primary">BALNZ</span>
+              <span className="text-2xl font-bold tracking-tight text-primary">
+                BALNZ
+              </span>
             </Link>
 
-            <p className="text-lg leading-7 text-muted-foreground">
+            <p className="text-lg text-muted-foreground">
               Strong. Steady. Safe.
             </p>
 
-            <p className="text-base leading-6 text-muted-foreground max-w-xs">
-              Science-based balance training designed to help you move with confidence, reduce fall risk, and stay independent at every stage of life.
+            <p className="text-base text-muted-foreground max-w-xs">
+              Science-based balance training designed to help you move with confidence,
+              reduce fall risk, and stay independent at every stage of life.
             </p>
           </div>
 
-          {/* Links Section */}
+          {/* Links */}
           <div className="mt-12 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-            
+
             <div className="md:grid md:grid-cols-2 md:gap-8">
-              
+
               {/* Programs */}
               <div>
-                <h3 className="text-base font-semibold leading-6 text-foreground">
+                <h3 className="text-base font-semibold text-foreground">
                   Programs
                 </h3>
-                <ul role="list" className="mt-4 space-y-3">
+                <ul className="mt-4 space-y-3">
                   {navigation.programs.map((item) => (
                     <li key={item.name}>
                       <Link
                         href={item.href}
-                        className="text-base leading-6 text-muted-foreground hover:text-primary transition-colors"
+                        className="text-muted-foreground hover:text-primary"
                       >
                         {item.name}
                       </Link>
@@ -77,15 +81,15 @@ export function Footer() {
 
               {/* Company */}
               <div className="mt-10 md:mt-0">
-                <h3 className="text-base font-semibold leading-6 text-foreground">
+                <h3 className="text-base font-semibold text-foreground">
                   Company
                 </h3>
-                <ul role="list" className="mt-4 space-y-3">
+                <ul className="mt-4 space-y-3">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
                       <Link
                         href={item.href}
-                        className="text-base leading-6 text-muted-foreground hover:text-primary transition-colors"
+                        className="text-muted-foreground hover:text-primary"
                       >
                         {item.name}
                       </Link>
@@ -98,15 +102,15 @@ export function Footer() {
 
             {/* Resources */}
             <div>
-              <h3 className="text-base font-semibold leading-6 text-foreground">
+              <h3 className="text-base font-semibold text-foreground">
                 Resources
               </h3>
-              <ul role="list" className="mt-4 space-y-3">
+              <ul className="mt-4 space-y-3">
                 {navigation.resources.map((item) => (
                   <li key={item.name}>
                     <Link
                       href={item.href}
-                      className="text-base leading-6 text-muted-foreground hover:text-primary transition-colors"
+                      className="text-muted-foreground hover:text-primary"
                     >
                       {item.name}
                     </Link>
@@ -119,10 +123,38 @@ export function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-12 border-t border-border pt-8">
-          <p className="text-base leading-5 text-muted-foreground text-center">
+        <div className="mt-12 border-t border-border pt-6 flex flex-col items-center gap-4">
+
+          {/* Legal Links */}
+          <div className="flex gap-6 text-sm text-muted-foreground">
+
+            {/* Terms (new tab) */}
+            <Link
+              href="/terms"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary"
+            >
+              Terms of Service
+            </Link>
+
+            {/* Privacy (new tab) */}
+            <Link
+              href="/privacy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary"
+            >
+              Privacy Policy
+            </Link>
+
+          </div>
+
+          {/* Copyright */}
+          <p className="text-base text-muted-foreground text-center">
             &copy; {new Date().getFullYear()} BALNZ. All rights reserved. Built for safer, stronger movement.
           </p>
+
         </div>
       </div>
     </footer>
