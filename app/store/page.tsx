@@ -92,7 +92,7 @@ export default function StorePage() {
       {/* Hero */}
       <section className="relative h-[55vh] min-h-[380px]">
         <Image
-          src="/images/cta_background.png"
+          src="/images/shop.png"
           alt="Shop BALNZ"
           fill
           priority
@@ -228,7 +228,7 @@ export default function StorePage() {
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 items-center">
             <div className="relative h-[420px] rounded-3xl overflow-hidden shadow-xl">
               <Image
-                src="/images/about_coach.png"
+                src="/images/shop.png"
                 alt="BALNZ training products"
                 fill
                 className="object-cover"

@@ -18,7 +18,7 @@ const programs = [
     href: "/programs#workplace",
   },
   {
-    title: "Athlete Agility & Stability",
+    title: "Balnace & Agility Training",
     description: "Enhance performance, coordination, and injury-resistant movement.",
     image: "/images/programs_athlete.png",
     href: "/programs#athlete",
@@ -101,18 +101,18 @@ export default function HomePage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section - Clean Split Layout with 30/70 Grid */}
-      <section className="relative min-h-[90vh] bg-gradient-to-br from-white via-secondary/30 to-accent/20 overflow-hidden">
+      <section className="relative min-h-[90vh] bg-gradient-to-br from-zinc-900 via-zinc-950 to-black overflow-hidden">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 py-8 lg:py-6">
           <div className="grid grid-cols-1 lg:grid-cols-10 gap-6 lg:gap-4 items-center min-h-[85vh]">
             {/* Left Side - Content (30% = 3/10) */}
             <div className="text-center lg:text-left order-2 lg:order-1 lg:col-span-3 flex flex-col justify-center">
               {/* Heading */}
-              <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-5xl xl:text-6xl text-balance">
+              <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-5xl xl:text-6xl text-balance">
                 Strong. Steady. Safe.
               </h1>
 
               {/* Subtext */}
-              <p className="mt-5 text-base leading-7 text-muted-foreground lg:text-lg max-w-sm mx-auto lg:mx-0">
+              <p className="mt-5 text-base leading-7 text-white/75 lg:text-lg max-w-sm mx-auto lg:mx-0">
                 Balance is the foundation of every confident step. BALNZ helps
                 you stay strong, steady, and safe with simple, science-based
                 training designed for everyday life.
@@ -131,33 +131,44 @@ export default function HomePage() {
                   asChild
                   variant="outline"
                   size="lg"
-                  className="text-base px-6 py-5 rounded-xl border-2 bg-white hover:bg-secondary transition-all"
+                  className="text-base px-6 py-5 rounded-xl border-2 bg-white/10 text-white border-white/30 hover:bg-white hover:text-black transition-all"
                 >
                   <Link href="/resources">Take a Balance Test</Link>
                 </Button>
               </div>
             </div>
 
-            {/* Right Side - Extra Large Cut-out Image (70% = 7/10) */}
+            {/* Right Side - Hero Video (70% = 7/10) */}
             <div className="relative order-1 lg:order-2 lg:col-span-7 flex justify-center items-center">
               <div className="relative w-full flex justify-center items-center">
-                <Image
-                  src="https://i.ibb.co/Fb2WYBHx/BP4-removebg-preview.png"
-                  alt="Balance training"
-                  width={800}
-                  height={1000}
-                  priority
-                  className="
-  block
-  mx-auto
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <div className="h-[240px] w-[240px] sm:h-[320px] sm:w-[320px] lg:h-[420px] lg:w-[420px] rounded-full bg-white/8 blur-3xl" />
+                </div>
 
-  w-[85%] sm:w-[70%] lg:w-full
-  max-w-[420px] sm:max-w-[500px] lg:max-w-none
-
-  object-contain
-  h-auto
-"
-                />
+                <div className="relative w-full max-w-[460px] sm:max-w-[560px] lg:max-w-none">
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="auto"
+                    className="
+                      block
+                      mx-auto
+                      w-[92%] sm:w-[82%] lg:w-full
+                      max-w-[460px] sm:max-w-[560px] lg:max-w-none
+                      h-auto
+                      object-contain
+                      contrast-110
+                      brightness-105
+                      saturate-110
+                      drop-shadow-[0_18px_40px_rgba(0,0,0,0.28)]
+                    "
+                  >
+                    <source src="/images/hero-videos.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
               </div>
             </div>
           </div>
@@ -252,7 +263,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 items-center">
             <div className="relative h-[500px] rounded-3xl overflow-hidden">
               <Image
-                src="/images/programs_home.png"
+                src="/images/balance.png"
                 alt="Balance training in action"
                 fill
                 className="object-cover"

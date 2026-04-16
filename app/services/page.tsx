@@ -7,12 +7,12 @@ import { CheckCircle } from "lucide-react"
 const services = [
   {
     title: "Individual Balance Assessments",
-    image: "/images/services_oneonone.png", // 👤 assessment feel
+    image: "/images/services_1.png", // 👤 assessment feel
     price: "BT-Tracks testing, posture analysis, and fall-risk screening",
   },
   {
     title: "One-on-One Balance Training",
-    image: "/images/services_oneonone.png", // 👨‍⚕️ personal training
+    image: "/images/services_2.png", // 👨‍⚕️ personal training
     price: "Private sessions tailored to goals, ability, and comfort level",
   },
   {
@@ -27,12 +27,12 @@ const services = [
   },
   {
     title: "Community Workshops & Events",
-    image: "/images/services_group.png", // 👨‍👩‍👧 community vibe
+    image: "/images/services_education.png", // 👨‍👩‍👧 community vibe
     price: "Educational sessions on balance, falls, and safe movement",
   },
   {
     title: "Online Training & Digital Resources",
-    image: "/images/resource_routine.png", // 📱 home/digital learning
+    image: "/images/services_6.png", // 📱 home/digital learning
     price: "Flexible at-home learning with videos, guides, and routines",
   },
 ]
@@ -55,7 +55,7 @@ const packages = [
     name: "Training & Support",
     price: "Most Popular",
     description: "Guided balance improvement for daily confidence",
-    image: "/images/services_group.png", // 👥 training
+    image: "/images/most_popular.png", // 👥 training
     features: [
       "One-on-one training sessions",
       "Strength and coordination work",

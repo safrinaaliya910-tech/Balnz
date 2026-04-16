@@ -28,21 +28,21 @@ const guides = [
     title: "Beginner Balance Routine",
     type: "Printable Routine",
     description: "Simple step-by-step exercises using a chair or countertop.",
-    image: "/images/resource_routine.png",
+    image: "/images/resource_1.png",
     downloadUrl: "https://www.w3.org/WAI/WCAG21/Techniques/pdf/img/table-word.pdf",
   },
   {
     title: "Daily Balance Tracker",
     type: "Printable Tracker",
     description: "A simple way to notice patterns in steadiness and confidence.",
-    image: "/images/resource_check.png",
+    image: "/images/resource_3.png",
     downloadUrl: "https://www.w3.org/WAI/WCAG21/Techniques/pdf/img/table-word.pdf",
   },
   {
     title: "Weekly Movement Planner",
     type: "Printable Planner",
     description: "Build consistency and stay motivated through the week.",
-    image: "/images/programs_workplace.png",
+    image: "/images/resource_4.png",
     downloadUrl: "https://www.w3.org/WAI/WCAG21/Techniques/pdf/img/table-word.pdf",
   },
 ]
@@ -52,28 +52,28 @@ const videos = [
     title: "5-Minute Warm-Up for Stability",
     duration: "5:00",
     description: "A gentle warm-up to prepare the body for safe movement.",
-    image: "/images/programs_home.png",
+    image: "/images/video_1.png",
     videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
   },
   {
     title: "Beginner Tai Chi Flow",
     duration: "4:20",
     description: "Slow, controlled movements to improve awareness and calm.",
-    image: "/images/services_group.png",
+    image: "/images/video_2.png",
     videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
   },
   {
     title: "Safe Turning Techniques",
     duration: "3:15",
     description: "Simple techniques to help you stay steady during turns.",
-    image: "/images/programs_athlete.png",
+    image: "/images/video_3.png",
     videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
   },
   {
     title: "Daily Mobility Routine",
     duration: "6:00",
     description: "A gentle full-body routine to reduce stiffness and support balance.",
-    image: "/images/programs_senior.png",
+    image: "/images/video_4.png",
     videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
   },
 ]
@@ -137,7 +137,7 @@ const blogPosts = [
     excerpt:
       "A clear explanation of the physical and neurological changes that affect stability—and what can help.",
     date: "BALNZ Guide",
-    image: "/images/programs_senior.png",
+    image: "/images/education1.png",
   },
   {
     title: "Understanding Fall Risk",
@@ -151,14 +151,14 @@ const blogPosts = [
     excerpt:
       "An introduction to the BALNZ method and how science-based movement supports confidence.",
     date: "BALNZ Guide",
-    image: "/images/hero_home.png",
+    image: "/images/education3.png",
   },
   {
     title: "Medication & Dizziness Awareness",
     excerpt:
       "A simple awareness guide to help notice habits or factors that may affect balance.",
     date: "BALNZ Guide",
-    image: "/images/resource_check.png",
+    image: "/images/education4.png",
   },
 ]
 

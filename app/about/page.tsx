@@ -9,7 +9,7 @@ const team = [
     name: "A Moment That Sparked a Mission",
     role: "The Beginning of BALNZ",
     bio: "BALNZ was born from a real-life event that revealed how quickly a fall can change a family’s life and why balance training matters.",
-    image: "/images/testimonial_2.png",
+    image: "/images/sparked.png",
   },
   {
     name: "A Physical Therapist’s Journey",
@@ -21,13 +21,13 @@ const team = [
     name: "The Creation of BALNZ",
     role: "Science-Based Movement",
     bio: "BALNZ blends physical therapy, neuroscience, Tai Chi principles, and yoga-inspired control into one simple, safe, and accessible system.",
-    image: "/images/about_coach.png",
+    image: "/images/creation.png",
   },
   {
     name: "A Message From Daniel",
     role: "Movement for Life",
     bio: "Balance is not just a physical skill—it’s independence, safety, and quality of life. BALNZ was created to help people move with confidence.",
-    image: "/images/services_oneonone.png",
+    image: "/images/message.png",
   },
 ]
 
@@ -41,19 +41,19 @@ const stats = [
 const values = [
   {
     title: "Simplicity",
-    image: "/images/programs_home.png",
-  },
-  {
-    title: "Science",
     image: "/images/services_oneonone.png",
   },
   {
-    title: "Confidence",
-    image: "/images/services_group.png",
+    title: "Science",
+    image: "/images/science.png",
   },
   {
-    title: "Dignity",
-    image: "/images/programs_senior.png",
+    title: "Confidence",
+    image: "/images/confidence.png",
+  },
+  {
+    title: "Empowered Aging",
+    image: "/images/dignity.png",
   },
 ]
 

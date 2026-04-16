@@ -32,7 +32,7 @@ const programs = [
   },
   {
     id: "athlete",
-    title: "Athlete Stability & Agility",
+    title: "Balance & Agility Training",
     tagline: "Build control, coordination, and injury-resistant movement",
     image: "/images/programs_athlete.png", // 🏃 athletic feel
     features: [
@@ -64,7 +64,7 @@ export default function ProgramsPage() {
       {/* Hero Section */}
       <section className="relative h-[60vh] min-h-[400px]">
         <Image
-          src="/images/programs_home.png" // 👈 clean hero (safe choice)
+          src="/images/dignity.png" // 👈 clean hero (safe choice)
           alt="Balance training programs"
           fill
           className="object-cover"

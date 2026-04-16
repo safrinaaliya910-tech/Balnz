@@ -9,7 +9,7 @@ const updates = [
     title: "Why Balance Training Matters More Than Most People Realize",
     category: "Daily News",
     date: "Today",
-    image: "/images/programs_senior.png",
+    image: "/images/community1.png",
     excerpt:
       "Balance affects walking, stairs, posture, and everyday confidence. Training it early can improve safety and long-term independence.",
   },
@@ -17,7 +17,7 @@ const updates = [
     title: "Simple Fall-Prevention Habits That Make a Big Difference",
     category: "Community Update",
     date: "This Week",
-    image: "/images/resource_check.png",
+    image: "/images/community2.png",
     excerpt:
       "Small habits like better lighting, supportive footwear, and safe turning techniques can help reduce fall risk at home.",
   },
@@ -25,7 +25,7 @@ const updates = [
     title: "How Better Posture Supports Stability and Daily Movement",
     category: "Wellness Insight",
     date: "This Week",
-    image: "/images/programs_workplace.png",
+    image: "/images/community3.png",
     excerpt:
       "Posture plays a key role in how the body balances. Better alignment helps improve movement control and reduce strain.",
   },
@@ -41,7 +41,7 @@ const updates = [
     title: "Healthy Aging Includes Strength, Stability, and Confidence",
     category: "BALNZ Update",
     date: "This Month",
-    image: "/images/about_coach.png",
+    image: "/images/community4.png",
     excerpt:
       "Aging well is not only about strength. Stability, body awareness, and confidence in movement are just as important.",
   },
