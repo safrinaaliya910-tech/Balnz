@@ -7,12 +7,12 @@ import { CheckCircle } from "lucide-react"
 const services = [
   {
     title: "Individual Balance Assessments",
-    image: "/images/services_1.png", // 👤 assessment feel
+    image: "/images/individual.png", // 👤 assessment feel
     price: "BT-Tracks testing, posture analysis, and fall-risk screening",
   },
   {
     title: "One-on-One Balance Training",
-    image: "/images/services_2.png", // 👨‍⚕️ personal training
+    image: "/images/individual3.png", // 👨‍⚕️ personal training
     price: "Private sessions tailored to goals, ability, and comfort level",
   },
   {
@@ -22,7 +22,7 @@ const services = [
   },
   {
     title: "Workplace Balance & Mobility Programs",
-    image: "/images/programs_workplace.png", // 💻 workplace
+    image: "/images/individual2.png", // 💻 workplace
     price: "On-site or virtual sessions for healthier workplace movement",
   },
   {
@@ -32,7 +32,7 @@ const services = [
   },
   {
     title: "Online Training & Digital Resources",
-    image: "/images/services_6.png", // 📱 home/digital learning
+    image: "/images/individual4.png", // 📱 home/digital learning
     price: "Flexible at-home learning with videos, guides, and routines",
   },
 ]
@@ -42,7 +42,7 @@ const packages = [
     name: "Assessment & Awareness",
     price: "Great Starting Point",
     description: "Understand balance, stability, and fall risk",
-    image: "/images/services_oneonone.png", // 👤 evaluation
+    image: "/images/individual.png", // 👤 evaluation
     features: [
       "Evidence-based balance evaluation",
       "BT-Tracks balance testing",
@@ -126,7 +126,7 @@ export default function ServicesPage() {
             {services.map((service, index) => (
               <Link key={index} href="/contact" className="group">
                 <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 bg-card">
-                  <div className="relative h-48 overflow-hidden">
+                  <div className="relative h-64 overflow-hidden">
                     <Image
                       src={service.image}
                       alt={service.title}
@@ -176,7 +176,7 @@ export default function ServicesPage() {
                   </div>
                 )}
 
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-64 overflow-hidden">
                   <Image
                     src={pkg.image}
                     alt={pkg.name}
