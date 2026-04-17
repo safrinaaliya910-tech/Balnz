@@ -100,31 +100,35 @@ const resources = [
 export default function HomePage() {
   return (
     <div className="flex flex-col">
-      {/* Hero Section - Clean Split Layout with 30/70 Grid */}
-      <section className="relative min-h-[90vh] overflow-hidden bg-gradient-to-br from-zinc-900 via-zinc-950 to-black">
-        <div className="mx-auto max-w-7xl px-6 pt-24 pb-8 lg:px-8 lg:pt-28 lg:pb-6">
-          <div className="grid min-h-[calc(90vh-6rem)] grid-cols-1 items-center gap-8 lg:min-h-[calc(90vh-7rem)] lg:grid-cols-10 lg:gap-6">
+      {/* Hero Section - Fixed for BOTH Light and Dark themes */}
+      <section className="relative min-h-[90vh] bg-gradient-to-br from-white via-secondary/30 to-accent/20 dark:from-zinc-400 dark:via-zinc-950 dark:to-black overflow-hidden transition-colors duration-300">
+        
+        {/* Padding added to clear the navbar */}
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8 pt-28 pb-8 lg:pt-32 lg:pb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-10 gap-6 lg:gap-8 items-center min-h-[75vh]">
+            
             {/* Left Side - Content (30% = 3/10) */}
-            <div className="order-2 flex flex-col justify-center text-center lg:order-1 lg:col-span-3 lg:text-left">
-              <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-5xl xl:text-6xl text-balance">
-                Strong.
-                <br />
-                Steady.
-                <br />
+            <div className="text-center lg:text-left order-2 lg:order-1 lg:col-span-4 flex flex-col justify-center">
+              {/* Heading */}
+              <h1 className="text-4xl font-bold tracking-tight text-foreground dark:text-white sm:text-5xl lg:text-6xl text-balance drop-shadow-sm dark:drop-shadow-md">
+                Strong.<br />
+                Steady.<br />
                 Safe.
               </h1>
 
-              <p className="mx-auto mt-5 max-w-sm text-base leading-7 text-white/75 lg:mx-0 lg:text-lg">
+              {/* Subtext */}
+              <p className="mt-5 text-base leading-7 text-muted-foreground dark:text-zinc-200 lg:text-lg max-w-sm mx-auto lg:mx-0 drop-shadow-sm">
                 Balance is the foundation of every confident step. BALNZ helps
                 you stay strong, steady, and safe with simple, science-based
                 training designed for everyday life.
               </p>
 
-              <div className="mt-8 flex flex-col gap-3 justify-center lg:justify-start">
+              {/* Buttons */}
+              <div className="mt-8 flex flex-col gap-4 justify-center lg:justify-start max-w-[280px] mx-auto lg:mx-0">
                 <Button
                   asChild
                   size="lg"
-                  className="rounded-xl px-6 py-5 text-base shadow-lg shadow-primary/30 transition-all hover:shadow-xl hover:shadow-primary/40"
+                  className="text-base font-medium px-6 py-6 rounded-2xl bg-zinc-900 text-white hover:bg-zinc-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200 transition-all w-full shadow-lg"
                 >
                   <Link href="/contact">Get Started</Link>
                 </Button>
@@ -132,51 +136,36 @@ export default function HomePage() {
                   asChild
                   variant="outline"
                   size="lg"
-                  className="rounded-xl border-2 border-white/30 bg-white/10 px-6 py-5 text-base text-white transition-all hover:bg-white hover:text-black"
+                  className="text-base font-medium px-6 py-6 rounded-2xl border border-zinc-300 bg-white/50 text-zinc-900 hover:bg-zinc-100 dark:border-zinc-500 dark:bg-black/40 dark:text-white dark:hover:bg-black/60 backdrop-blur-sm transition-all w-full"
                 >
                   <Link href="/resources">Take a Balance Test</Link>
                 </Button>
               </div>
             </div>
 
-            {/* Right Side - Hero Video (70% = 7/10) */}
-            <div className="relative order-1 flex items-center justify-center self-center lg:order-2 lg:col-span-7">
-              <div className="relative flex w-full items-center justify-center">
-                <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-                  <div className="h-[240px] w-[240px] rounded-full bg-white/8 blur-3xl sm:h-[320px] sm:w-[320px] lg:h-[420px] lg:w-[420px]" />
-                </div>
-
-                <div className="relative flex w-full items-center justify-center">
-                  <video
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    preload="auto"
-                    className="
-                      block
-                      mx-auto
-                      mt-2 lg:mt-0
-                      w-[88%] sm:w-[78%] lg:w-[92%]
-                      max-w-[420px] sm:max-w-[520px] lg:max-w-[860px]
-                      h-auto
-                      object-contain
-                      contrast-110
-                      brightness-105
-                      saturate-110
-                      drop-shadow-[0_18px_40px_rgba(0,0,0,0.28)]
-                    "
-                  >
-                    <source src="/images/hero-videos.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
+            {/* Right Side - Extra Large Cut-out Image (70% = 7/10) */}
+            <div className="relative order-1 lg:order-2 lg:col-span-6 flex justify-center items-center">
+              <div className="relative w-full flex justify-center items-center">
+                <Image
+                  src="https://i.ibb.co/Fb2WYBHx/BP4-removebg-preview.png"
+                  alt="Balance training"
+                  width={800}
+                  height={1000}
+                  priority
+                  className="
+                    block
+                    mx-auto
+                    w-full
+                    max-w-[420px] sm:max-w-[550px] lg:max-w-[750px]
+                    max-h-[60vh] lg:max-h-[70vh]
+                    object-contain
+                    drop-shadow-2xl
+                  "
+                />
               </div>
             </div>
           </div>
         </div>
-
-        <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-background to-transparent" />
       </section>
 
       {/* Programs Section - Image Cards */}
