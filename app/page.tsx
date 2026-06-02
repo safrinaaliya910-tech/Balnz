@@ -2,7 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowRight, Star, Play, Download, FileText, Trophy, MapPin, Users } from "lucide-react"
+import { ArrowRight, Star, Play, Download, FileText, Trophy, MapPin, Users, BookOpen, Package, Dumbbell, MonitorPlay } from "lucide-react"
 
 const programs = [
   {
@@ -129,12 +129,8 @@ export default function HomePage() {
               </h1>
 
               {/* Subtext */}
-              <p className="mt-5 text-base leading-7 text-muted-foreground dark:text-zinc-200 lg:text-lg max-w-sm mx-auto lg:mx-0 drop-shadow-sm">
-                Balance is the foundation of every confident step. At BALNZ, we help 
-                people of all ages build strength, stability, and lifelong mobility 
-                through simple, science-based training and education. Whether you're 
-                improving your balance, preventing falls, or enhancing performance, 
-                BALNZ gives you the tools to move with confidence.
+              <p className="mt-5 text-sm leading-7 text-muted-foreground dark:text-zinc-200 lg:text-lg max-w-sm mx-auto lg:mx-0 drop-shadow-sm">
+                Balance is the foundation of every confident step. BALNZ helps you stay strong, steady, and safe with simple, science-based training designed for everyday life.
               </p>
               {/* Buttons */}
               <div className="mt-8 flex flex-col gap-4 justify-center lg:justify-start max-w-[280px] mx-auto lg:mx-0">
@@ -357,6 +353,7 @@ export default function HomePage() {
             </Button>
           </div>
         </div>
+        </section>
         {/* Community Section */}
 <section className="py-20 lg:py-28 bg-primary/5">
   <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -397,6 +394,60 @@ export default function HomePage() {
     </div>
   </div>
 </section>
+
+      {/* BZ-05 — Shop Teaser Section */}
+      <section className="py-20 lg:py-28 bg-secondary/50">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              Shop BALNZ
+            </h2>
+            <p className="mt-4 text-lg font-semibold text-foreground">
+              Tools to Support Your Journey
+            </p>
+            <p className="mt-2 text-lg text-muted-foreground">
+              Discover products designed to help you train safely and effectively:
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                title: "BALNZ Book",
+                image: "https://images.pexels.com/photos/30146365/pexels-photo-30146365.jpeg?w=600&fit=crop&auto=compress",
+              },
+              {
+                title: "Balance Kits",
+                image: "https://images.pexels.com/photos/6815668/pexels-photo-6815668.jpeg?w=600&fit=crop&auto=compress",
+              },
+              {
+                title: "Stability Tools",
+                image: "https://images.pexels.com/photos/4587700/pexels-photo-4587700.jpeg?w=600&fit=crop&auto=compress",
+              },
+              {
+                title: "Digital Programs",
+                image: "https://images.pexels.com/photos/7500317/pexels-photo-7500317.jpeg?w=600&fit=crop&auto=compress",
+              },
+            ].map(({ title, image }) => (
+              <div key={title} className="group relative h-72 rounded-2xl overflow-hidden">
+                <Image
+                  src={image}
+                  alt={title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/10 to-transparent" />
+                <div className="absolute bottom-5 left-5 right-5">
+                  <h3 className="text-xl font-bold text-white">{title}</h3>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-12 text-center">
+            <Button asChild size="lg">
+              <Link href="/store">Visit the Shop</Link>
+            </Button>
+          </div>
+        </div>
       </section>
 
       {/* Testimonials Section - Profile Images */}
