@@ -130,9 +130,12 @@ export default function HomePage() {
 
               {/* Subtext */}
               <p className="mt-5 text-base leading-7 text-muted-foreground dark:text-zinc-200 lg:text-lg max-w-sm mx-auto lg:mx-0 drop-shadow-sm">
-                Balance is the foundation of every confident step. BALNZ helps
-                you stay strong, steady, and safe with simple, science-based
-                training designed for everyday life.
+                Balance is the foundation of every confident step. At BALNZ,
+                we help people of all ages build strength, stability, and 
+                lifelong mobility through simple, science-based training and 
+                education. Whether you're improving your balance, preventing 
+                falls, or enhancing performance, BALNZ gives you the tools to 
+                move with confidence.
               </p>
 
               {/* Buttons */}
