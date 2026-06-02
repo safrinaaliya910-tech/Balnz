@@ -2,7 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowRight, Star, Play, Download, FileText } from "lucide-react"
+import { ArrowRight, Star, Play, Download, FileText, Trophy, MapPin, Users } from "lucide-react"
 
 const programs = [
   {
@@ -130,14 +130,12 @@ export default function HomePage() {
 
               {/* Subtext */}
               <p className="mt-5 text-base leading-7 text-muted-foreground dark:text-zinc-200 lg:text-lg max-w-sm mx-auto lg:mx-0 drop-shadow-sm">
-                Balance is the foundation of every confident step. At BALNZ,
-                we help people of all ages build strength, stability, and 
-                lifelong mobility through simple, science-based training and 
-                education. Whether you're improving your balance, preventing 
-                falls, or enhancing performance, BALNZ gives you the tools to 
-                move with confidence.
+                Balance is the foundation of every confident step. At BALNZ, we help 
+                people of all ages build strength, stability, and lifelong mobility 
+                through simple, science-based training and education. Whether you're 
+                improving your balance, preventing falls, or enhancing performance, 
+                BALNZ gives you the tools to move with confidence.
               </p>
-
               {/* Buttons */}
               <div className="mt-8 flex flex-col gap-4 justify-center lg:justify-start max-w-[280px] mx-auto lg:mx-0">
                 <Button
@@ -359,6 +357,46 @@ export default function HomePage() {
             </Button>
           </div>
         </div>
+        {/* Community Section */}
+<section className="py-20 lg:py-28 bg-primary/5">
+  <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className="mx-auto max-w-2xl text-center mb-16">
+      <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+        A Movement Built on Confidence
+      </h2>
+      <p className="mt-4 text-lg text-muted-foreground">
+        Join a growing community of people improving their balance — one steady step at a time.
+      </p>
+    </div>
+    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+      <div className="text-center p-6 rounded-2xl bg-card border border-border">
+        <Trophy className="h-10 w-10 text-primary mx-auto mb-4" />
+        <h3 className="text-lg font-semibold text-foreground mb-2">Monthly Balance Challenges</h3>
+        <p className="text-muted-foreground text-sm">Guided challenges that build strength and confidence step by step.</p>
+      </div>
+      <div className="text-center p-6 rounded-2xl bg-card border border-border">
+        <Star className="h-10 w-10 text-primary mx-auto mb-4" />
+        <h3 className="text-lg font-semibold text-foreground mb-2">Success Stories</h3>
+        <p className="text-muted-foreground text-sm">Real people sharing real progress — inspiring everyone on the journey.</p>
+      </div>
+      <div className="text-center p-6 rounded-2xl bg-card border border-border">
+        <MapPin className="h-10 w-10 text-primary mx-auto mb-4" />
+        <h3 className="text-lg font-semibold text-foreground mb-2">Local Workshops</h3>
+        <p className="text-muted-foreground text-sm">Find in-person events and workshops near you led by certified instructors.</p>
+      </div>
+      <div className="text-center p-6 rounded-2xl bg-card border border-border">
+        <Users className="h-10 w-10 text-primary mx-auto mb-4" />
+        <h3 className="text-lg font-semibold text-foreground mb-2">Ambassador Program</h3>
+        <p className="text-muted-foreground text-sm">Bring balance training to your community, workplace, or center.</p>
+      </div>
+    </div>
+    <div className="mt-12 text-center">
+      <Button asChild size="lg">
+        <Link href="/community">Join the Community</Link>
+      </Button>
+    </div>
+  </div>
+</section>
       </section>
 
       {/* Testimonials Section - Profile Images */}
