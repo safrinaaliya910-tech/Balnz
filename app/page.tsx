@@ -18,7 +18,7 @@ const programs = [
     href: "/programs#workplace",
   },
   {
-    title: "Balnace & Agility Training",
+    title: "Athlete Stability & Agility",
     description: "Enhance performance, coordination, and injury-resistant movement.",
     image: "/images/programs_athlete.png",
     href: "/programs#athlete",
@@ -28,6 +28,18 @@ const programs = [
     description: "Simple, safe routines you can do confidently in your own space.",
     image: "/images/programs_home.png",
     href: "/programs#home",
+  },
+  {
+    title: "Balance for Kids & Teens",
+    description: "Build coordination, posture, and motor skills from an early age.",
+    image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=500&fit=crop&auto=format",
+    href: "/programs#kids",
+  },
+  {
+    title: "Rehab & Recovery",
+    description: "PT-informed exercises for safe, gradual progress after injury or illness.",
+    image: "https://images.pexels.com/photos/20860594/pexels-photo-20860594.jpeg?w=500&fit=crop&auto=compress",
+    href: "/programs#rehab",
   },
 ]
 
