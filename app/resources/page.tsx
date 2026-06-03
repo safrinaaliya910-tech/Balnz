@@ -45,6 +45,34 @@ const guides = [
     image: "/images/resource_4.png",
     downloadUrl: "https://www.w3.org/WAI/WCAG21/Techniques/pdf/img/table-word.pdf",
   },
+  {
+  title: "5-Minute Warm-Up for Stability",
+  type: "Printable Routine",
+  description: "A gentle warm-up to prepare your body for safe, confident movement.",
+  image: "/images/resource_1.png",
+  downloadUrl: "https://www.w3.org/WAI/WCAG21/Techniques/pdf/img/table-word.pdf",
+},
+{
+  title: "Beginner Tai Chi Flow",
+  type: "Printable Guide",
+  description: "Slow, controlled movements to improve coordination, awareness, and calm.",
+  image: "/images/resource_3.png",
+  downloadUrl: "https://www.w3.org/WAI/WCAG21/Techniques/pdf/img/table-word.pdf",
+},
+{
+  title: "Fall-Risk Awareness Guide",
+  type: "Printable Guide",
+  description: "Understand the most common fall risk factors and how to reduce them.",
+  image: "/images/resource_4.png",
+  downloadUrl: "https://www.w3.org/WAI/WCAG21/Techniques/pdf/img/table-word.pdf",
+},
+{
+  title: "Medication & Dizziness Awareness Guide",
+  type: "Printable Guide",
+  description: "Notice how medications and daily habits may affect your balance.",
+  image: "/images/resource_guide.png",
+  downloadUrl: "https://www.w3.org/WAI/WCAG21/Techniques/pdf/img/table-word.pdf",
+},
 ]
 
 const videos = [
