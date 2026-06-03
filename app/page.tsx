@@ -449,7 +449,66 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
+      {/* BZ-06 — Partners & Collaboration Section */}
+<section className="py-20 lg:py-28 bg-secondary/50">
+  <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className="mx-auto max-w-2xl text-center mb-16">
+      <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+        Working Together for a Steadier World
+      </h2>
+      <p className="mt-4 text-lg text-muted-foreground">
+        We partner with clinics, gyms, senior centers, workplaces, and global
+        organizations to bring balance training to more people.
+      </p>
+    </div>
+    <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5">
+      {[
+        {
+          label: "Clinics",
+          image: "https://images.pexels.com/photos/6129502/pexels-photo-6129502.jpeg?w=600&fit=crop&auto=compress",
+        },
+        {
+          label: "Gyms",
+          image: "https://images.pexels.com/photos/3076516/pexels-photo-3076516.jpeg?w=600&fit=crop&auto=compress",
+        },
+        {
+          label: "Senior Centers",
+          image: "https://images.pexels.com/photos/7551617/pexels-photo-7551617.jpeg?w=600&fit=crop&auto=compress",
+        },
+        {
+          label: "Workplaces",
+          image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?w=600&fit=crop&auto=compress",
+        },
+        {
+          label: "Global Organizations",
+          image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?w=600&fit=crop&auto=compress",
+        },
+      ].map(({ label, image }) => (
+        <div
+          key={label}
+          className="group flex flex-col rounded-2xl overflow-hidden bg-card border border-border hover:shadow-lg transition-shadow duration-300"
+        >
+          <div className="relative h-40 overflow-hidden">
+            <Image
+              src={image}
+              alt={label}
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div className="p-4 text-center">
+            <p className="text-sm font-semibold text-foreground">{label}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+    <div className="mt-12 text-center">
+      <Button asChild size="lg">
+        <Link href="/partners">Partner With Us</Link>
+      </Button>
+    </div>
+  </div>
+</section>
       {/* Testimonials Section - Profile Images */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
