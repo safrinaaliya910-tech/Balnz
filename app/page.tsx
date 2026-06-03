@@ -188,7 +188,7 @@ export default function HomePage() {
               Training for every stage of life.
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {programs.map((program) => (
               <Link key={program.title} href={program.href} className="group">
                 <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 bg-card">
@@ -310,7 +310,7 @@ export default function HomePage() {
       </section>
 
       {/* Resources Section - Image Thumbnails */}
-      <section className="py-20 lg:py-28 bg-primary/5">
+      <section className="py-14 lg:py-20 bg-primary/5">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -355,7 +355,7 @@ export default function HomePage() {
         </div>
         </section>
         {/* Community Section */}
-<section className="py-20 lg:py-28 bg-primary/5">
+<section className="py-14 lg:py-20 bg-background">
   <div className="mx-auto max-w-7xl px-6 lg:px-8">
     <div className="mx-auto max-w-2xl text-center mb-16">
       <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -365,27 +365,38 @@ export default function HomePage() {
         Join a growing community of people improving their balance — one steady step at a time.
       </p>
     </div>
-    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-      <div className="text-center p-6 rounded-2xl bg-card border border-border">
-        <Trophy className="h-10 w-10 text-primary mx-auto mb-4" />
-        <h3 className="text-lg font-semibold text-foreground mb-2">Monthly Balance Challenges</h3>
-        <p className="text-muted-foreground text-sm">Guided challenges that build strength and confidence step by step.</p>
-      </div>
-      <div className="text-center p-6 rounded-2xl bg-card border border-border">
-        <Star className="h-10 w-10 text-primary mx-auto mb-4" />
-        <h3 className="text-lg font-semibold text-foreground mb-2">Success Stories</h3>
-        <p className="text-muted-foreground text-sm">Real people sharing real progress — inspiring everyone on the journey.</p>
-      </div>
-      <div className="text-center p-6 rounded-2xl bg-card border border-border">
-        <MapPin className="h-10 w-10 text-primary mx-auto mb-4" />
-        <h3 className="text-lg font-semibold text-foreground mb-2">Local Workshops</h3>
-        <p className="text-muted-foreground text-sm">Find in-person events and workshops near you led by certified instructors.</p>
-      </div>
-      <div className="text-center p-6 rounded-2xl bg-card border border-border">
-        <Users className="h-10 w-10 text-primary mx-auto mb-4" />
-        <h3 className="text-lg font-semibold text-foreground mb-2">Ambassador Program</h3>
-        <p className="text-muted-foreground text-sm">Bring balance training to your community, workplace, or center.</p>
-      </div>
+    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      {[
+        {
+          title: "Monthly Balance Challenges",
+          image: "https://images.pexels.com/photos/6957883/pexels-photo-6957883.jpeg?w=600&fit=crop&auto=compress",
+        },
+        {
+          title: "Success Stories",
+          image: "https://images.pexels.com/photos/7243360/pexels-photo-7243360.jpeg?w=600&fit=crop&auto=compress",
+        },
+        {
+          title: "Local Workshops",
+          image: "https://images.pexels.com/photos/6815701/pexels-photo-6815701.jpeg?w=600&fit=crop&auto=compress",
+        },
+        {
+          title: "Ambassador Program",
+          image: "https://images.pexels.com/photos/8761330/pexels-photo-8761330.jpeg?w=600&fit=crop&auto=compress",
+        },
+      ].map(({ title, image }) => (
+        <div key={title} className="group relative h-64 rounded-2xl overflow-hidden">
+          <Image
+            src={image}
+            alt={title}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/10 to-transparent" />
+          <div className="absolute bottom-5 left-5 right-5">
+            <h3 className="text-lg font-bold text-white">{title}</h3>
+          </div>
+        </div>
+      ))}
     </div>
     <div className="mt-12 text-center">
       <Button asChild size="lg">
@@ -396,7 +407,7 @@ export default function HomePage() {
 </section>
 
       {/* BZ-05 — Shop Teaser Section */}
-      <section className="py-20 lg:py-28 bg-secondary/50">
+      <section className="py-14 lg:py-20 bg-secondary/50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -450,7 +461,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* BZ-06 — Partners & Collaboration Section */}
-<section className="py-20 lg:py-28 bg-secondary/50">
+<section className="py-14 lg:py-20 bg-secondary/50">
   <div className="mx-auto max-w-7xl px-6 lg:px-8">
     <div className="mx-auto max-w-2xl text-center mb-16">
       <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -509,8 +520,31 @@ export default function HomePage() {
     </div>
   </div>
 </section>
+{/* BZ-07 — Newsletter Signup Section */}
+<section className="py-10 lg:py-12 bg-background">
+  <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className="mx-auto max-w-2xl text-center">
+      <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+        Stay Connected
+      </h2>
+      <p className="mt-4 text-lg text-muted-foreground">
+        Sign up for balance tips, new programs, and upcoming events.
+      </p>
+      <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto">
+        <input
+          type="email"
+          placeholder="Enter your email"
+          className="flex-1 rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+        />
+        <Button size="lg" className="rounded-xl px-6">
+          Subscribe
+        </Button>
+      </div>
+    </div>
+  </div>
+</section>
       {/* Testimonials Section - Profile Images */}
-      <section className="py-20 lg:py-28 bg-background">
+      <section className="py-14 lg:py-20 bg-background">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
