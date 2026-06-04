@@ -8,7 +8,7 @@ const programs = [
     id: "senior",
     title: "Senior Balance & Fall Prevention",
     tagline: "Gentle routines to stay steady, confident, and independent",
-    image: "/images/programs_senior.png", // 👴 BEST MATCH (old age)
+    image: "/images/programs_senior.png",
     features: [
       "Reducing fall risk",
       "Improving stability and posture",
@@ -21,7 +21,7 @@ const programs = [
     id: "workplace",
     title: "Workplace Mobility & Injury Prevention",
     tagline: "Move better, feel better, and reduce strain throughout the workday",
-    image: "/images/programs_workplace.png", // 💻 workplace feel
+    image: "/images/programs_workplace.png",
     features: [
       "Reducing aches, stiffness, and fatigue",
       "Improving posture and body awareness",
@@ -34,7 +34,7 @@ const programs = [
     id: "athlete",
     title: "Balance & Agility Training",
     tagline: "Build control, coordination, and injury-resistant movement",
-    image: "/images/programs_athlete.png", // 🏃 athletic feel
+    image: "/images/programs_athlete.png",
     features: [
       "Improving single-leg stability",
       "Enhancing agility and reaction time",
@@ -47,7 +47,7 @@ const programs = [
     id: "home",
     title: "At-Home Balance Training",
     tagline: "Simple exercises you can do safely in your own space",
-    image: "/images/programs_home.png", // 🏠 home environment
+    image: "/images/programs_home.png",
     features: [
       "Building daily balance habits",
       "Improving strength and coordination",
@@ -55,6 +55,32 @@ const programs = [
       "Supporting long-term mobility",
     ],
     duration: "Ideal for: Anyone who wants a flexible, home-based routine",
+  },
+  {
+    id: "kids",
+    title: "Balance for Kids & Teens",
+    tagline: "Build coordination, confidence, and movement skills early",
+    image: "/images/programs_athlete.png",
+    features: [
+      "Developing coordination and body awareness",
+      "Building confidence in physical activity",
+      "Improving focus and reaction time",
+      "Creating healthy movement habits early in life",
+    ],
+    duration: "Ideal for: Children and teens ages 6–17, active youth, and young athletes",
+  },
+  {
+    id: "rehab",
+    title: "Rehab & Recovery",
+    tagline: "Rebuild strength, stability, and confidence after injury or illness",
+    image: "/images/individual3.png",
+    features: [
+      "Rebuilding balance after injury or surgery",
+      "Restoring confidence in movement",
+      "Strengthening stabilizing muscles safely",
+      "Supporting recovery from neurological conditions",
+    ],
+    duration: "Ideal for: Post-surgery recovery, stroke rehabilitation, and injury comebacks",
   },
 ]
 
