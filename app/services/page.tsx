@@ -7,33 +7,94 @@ import { CheckCircle } from "lucide-react"
 const services = [
   {
     title: "Individual Balance Assessments",
-    image: "/images/individual.png", // 👤 assessment feel
-    price: "BT-Tracks testing, posture analysis, and fall-risk screening",
+    image: "/images/individual.png",
+    description: "A personalized evaluation using evidence-based tools to measure balance, stability, and fall risk. Assessments help identify strengths, limitations, and the safest starting point for training.",
+    listLabel: "Includes:",
+    features: [
+      "BT-Tracks balance testing",
+      "Posture and movement analysis",
+      "Fall-risk screening",
+      "Personalized recommendations",
+    ],
+    duration: "Ideal for: Adults 50+, individuals recovering from injury, and anyone who feels unsteady",
   },
   {
     title: "One-on-One Balance Training",
-    image: "/images/individual3.png", // 👨‍⚕️ personal training
-    price: "Private sessions tailored to goals, ability, and comfort level",
+    image: "/images/individual3.png",
+    description: "Private sessions tailored to each person's ability level, goals, and comfort. Training blends physical therapy principles with Tai Chi, yoga, and neuromuscular control techniques.",
+    listLabel: "Focus areas:",
+    features: [
+      "Improving stability and coordination",
+      "Strengthening key muscle groups",
+      "Enhancing confidence in daily movement",
+      "Reducing fall risk",
+    ],
+    duration: "Ideal for: Beginners, seniors, and individuals seeking personalized support",
   },
   {
     title: "Small Group Classes",
-    image: "/images/services_group.png", // 👥 group training
-    price: "Supportive group training with individualized attention",
+    image: "/images/services_group.png",
+    description: "Safe, supportive classes designed to help participants improve balance together. Groups are kept small to ensure individualized attention and proper technique.",
+    listLabel: "Class types:",
+    features: [
+      "Beginner balance training",
+      "Tai Chi-inspired movement",
+      "Strength and stability circuits",
+      "Fall-prevention workshops",
+    ],
+    duration: "Ideal for: Community centers, senior living facilities, and wellness groups",
   },
   {
     title: "Workplace Balance & Mobility Programs",
-    image: "/images/individual2.png", // 💻 workplace
-    price: "On-site or virtual sessions for healthier workplace movement",
+    image: "/images/individual2.png",
+    description: "On-site or virtual programs that help employees move better, reduce strain, and prevent workplace-related injuries. Sessions are practical, accessible, and designed for busy schedules.",
+    listLabel: "Benefits:",
+    features: [
+      "Improved posture and body awareness",
+      "Reduced stiffness and fatigue",
+      "Better balance during daily tasks",
+      "Lower risk of musculoskeletal injuries",
+    ],
+    duration: "Ideal for: Offices, healthcare teams, educators, and corporate wellness programs",
   },
   {
     title: "Community Workshops & Events",
-    image: "/images/services_education.png", // 👨‍👩‍👧 community vibe
-    price: "Educational sessions on balance, falls, and safe movement",
+    image: "/images/services_education.png",
+    description: "Educational and interactive sessions that raise awareness about balance, fall prevention, and healthy movement. These events help communities understand the importance of balance at every age.",
+    listLabel: "Topics include:",
+    features: [
+      "Why balance declines",
+      "How to prevent falls",
+      "Simple exercises for home",
+      "How to assess your own stability",
+    ],
+    duration: "Ideal for: Senior centers, churches, health fairs, and community organizations",
   },
   {
     title: "Online Training & Digital Resources",
-    image: "/images/individual4.png", // 📱 home/digital learning
-    price: "Flexible at-home learning with videos, guides, and routines",
+    image: "/images/individual4.png",
+    description: "Accessible, at-home training options for individuals who prefer to learn and practice on their own schedule.",
+    listLabel: "Available resources:",
+    features: [
+      "Video lessons",
+      "Printable guides",
+      "Home safety checklists",
+      "Beginner balance routines",
+    ],
+    duration: "Ideal for: Anyone who wants flexible, self-paced training",
+  },
+  {
+    title: "Professional Education for Caregivers & Clinicians",
+    image: "/images/contact_support.png",
+    description: "Training designed for caregivers, PTs, OTs, and wellness professionals who want to integrate balance training into their work.",
+    listLabel: "Topics include:",
+    features: [
+      "Evidence-based balance principles",
+      "Safe progressions for older adults",
+      "Movement cues and coaching",
+      "Fall-prevention strategies",
+    ],
+    duration: "Ideal for: Healthcare teams, senior-care staff, and wellness instructors",
   },
 ]
 
@@ -110,8 +171,25 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-20 lg:py-28 bg-background">
+      {/* Intro */}
+<section className="py-16 bg-background">
+  <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className="text-center mb-12">
+      <p className="text-sm font-semibold tracking-widest text-primary uppercase mb-4">BALNZ Services</p>
+      <h2 className="text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl max-w-4xl mx-auto">
+        Science-Based Balance Training for Every Need
+      </h2>
+      <p className="mt-6 text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+        BALNZ offers a range of services designed to support individuals, families, communities, and organizations in improving balance, reducing fall risk, and building long-term confidence in movement. Every service is grounded in physical therapy, neuroscience, Tai Chi principles, and yoga-inspired control.
+      </p>
+      <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+        Whether someone needs one-on-one guidance, group instruction, or community education, BALNZ provides safe, accessible, and effective solutions.
+      </p>
+    </div>
+  </div>
+</section>
+{/* Services Grid */}
+      <section className="py-8 lg:py-12 bg-background">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -124,25 +202,43 @@ export default function ServicesPage() {
 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (
-              <Link key={index} href="/contact" className="group">
-                <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 bg-card">
-                  <div className="relative h-64 overflow-hidden">
-                    <Image
-                      src={service.image}
-                      alt={service.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
-                    <div className="absolute bottom-4 left-4">
-                      <h3 className="text-xl font-bold text-white">{service.title}</h3>
-                    </div>
-                  </div>
-                  <CardContent className="p-4">
-                    <p className="text-lg font-semibold text-primary">{service.price}</p>
-                  </CardContent>
-                </Card>
-              </Link>
+             <div key={index} className="group relative h-full">
+  <Link href="/contact">
+    <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 bg-card h-full">
+      <div className="relative h-64 overflow-hidden">
+        <Image
+          src={service.image}
+          alt={service.title}
+          fill
+          className="object-cover group-hover:scale-105 transition-transform duration-500"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
+        <div className="absolute bottom-4 left-4">
+          <h3 className="text-xl font-bold text-white">{service.title}</h3>
+        </div>
+      </div>
+      <CardContent className="p-6">
+  <p className="text-base text-primary font-medium">{service.duration}</p>
+</CardContent>
+    </Card>
+  </Link>
+
+  {/* Hover Popup */}
+  <div className="absolute inset-0 z-10 bg-card border border-border rounded-xl p-6 shadow-2xl opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none overflow-auto">
+    <h3 className="text-lg font-bold text-foreground">{service.title}</h3>
+    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{service.description}</p>
+    <p className="mt-3 text-sm font-semibold text-foreground">{service.listLabel}</p>
+    <ul className="mt-2 space-y-1">
+      {service.features.map((feature, i) => (
+        <li key={i} className="flex items-start gap-2 text-sm text-foreground">
+          <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0" />
+          {feature}
+        </li>
+      ))}
+    </ul>
+    <p className="mt-3 text-sm text-primary font-medium">{service.duration}</p>
+  </div>
+</div>
             ))}
           </div>
         </div>
@@ -217,7 +313,50 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Why BALNZ Services Work */}
+<section className="py-20 lg:py-28 bg-background">
+  <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 items-center">
+
+      <div className="relative h-[400px] rounded-3xl overflow-hidden">
+        <Image
+          src="/images/services_group.png"
+          alt="Why BALNZ Services Work"
+          fill
+          className="object-cover"
+        />
+      </div>
+
+      <div>
+        <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
+          Why BALNZ Services Work
+        </h2>
+        <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+          BALNZ services are built on a unique blend of:
+        </p>
+        <div className="mt-6 space-y-3">
+          {[
+            "Physical therapy and neuroscience",
+            "Tai Chi and yoga principles",
+            "Real-world movement patterns",
+            "Evidence-based balance training",
+          ].map((item) => (
+            <div key={item} className="flex items-start gap-3">
+              <span className="mt-2 h-2 w-2 rounded-full bg-primary flex-shrink-0" />
+              <p className="text-lg text-muted-foreground">{item}</p>
+            </div>
+          ))}
+        </div>
+        <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
+          Every service is designed to be safe, simple, and accessible — helping people move with confidence at any age.
+        </p>
+        
+      </div>
+
+    </div>
+  </div>
+</section>
+{/* CTA */}
       <section className="relative py-24 lg:py-32">
         <Image
           src="/images/cta_background.png" // 🎯 strong CTA
