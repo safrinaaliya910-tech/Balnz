@@ -3,10 +3,12 @@ import Image from "next/image"
 
 const navigation = {
   programs: [
-    { name: "Senior Balance Training", href: "/programs#senior" },
+    { name: "Senior Balance", href: "/programs#senior" },
     { name: "Workplace Mobility", href: "/programs#workplace" },
     { name: "Athlete Stability", href: "/programs#athlete" },
     { name: "Home-Based Training", href: "/programs#home" },
+    { name: "Kids & Teens", href: "/programs#kids" },
+  { name: "Rehab & Recovery", href: "/programs#rehab" },
   ],
   company: [
     { name: "About BALNZ", href: "/about" },
@@ -21,6 +23,12 @@ const navigation = {
     { name: "Exercise & Training Videos", href: "/resources#videos" },
     { name: "FAQs", href: "/resources#faq" },
     { name: "Educational Articles", href: "/resources#blog" },
+  ],
+  social: [
+    { name: "Instagram", href: "https://instagram.com/balnz", icon: "Instagram" },
+    { name: "Facebook", href: "https://facebook.com/balnz", icon: "Facebook" },
+    { name: "YouTube", href: "https://youtube.com/balnz", icon: "Youtube" },
+    { name: "LinkedIn", href: "https://linkedin.com/company/balnz", icon: "Linkedin" },
   ],
 }
 
@@ -121,40 +129,20 @@ export function Footer() {
 
           </div>
         </div>
-
-        {/* Bottom */}
-        <div className="mt-12 border-t border-border pt-6 flex flex-col items-center gap-4">
-
-          {/* Legal Links */}
-          <div className="flex gap-6 text-sm text-muted-foreground">
-
-            {/* Terms (new tab) */}
-            <Link
-              href="/terms"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primary"
-            >
-              Terms of Service
-            </Link>
-
-            {/* Privacy (new tab) */}
-            <Link
-              href="/privacy"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primary"
-            >
-              Privacy Policy
-            </Link>
-
-          </div>
-
-          {/* Copyright */}
-          <p className="text-base text-muted-foreground text-center">
-            &copy; {new Date().getFullYear()} BALNZ. All rights reserved. Built for safer, stronger movement.
+                {/* Bottom */}
+        <div className="mt-6 border-t border-border pt-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-muted-foreground">
+            &copy; {new Date().getFullYear()}  BALNZ, Inc. &bull; All rights reserved.
           </p>
-
+          <div className="flex items-center gap-5 text-sm text-muted-foreground">
+            <Link href="/terms" className="hover:text-primary transition-colors">Terms</Link>
+            <Link href="/privacy" className="hover:text-primary transition-colors">Privacy</Link>
+            <span className="text-muted-foreground/30">|</span>
+            <a href="https://instagram.com/balnz" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Instagram</a>
+            <a href="https://facebook.com/balnz" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Facebook</a>
+            <a href="https://youtube.com/balnz" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">YouTube</a>
+            <a href="https://linkedin.com/company/balnz" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">LinkedIn</a>
+          </div>
         </div>
       </div>
     </footer>
