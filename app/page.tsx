@@ -534,6 +534,7 @@ export default function HomePage() {
         <input
           type="email"
           placeholder="Enter your email"
+          suppressHydrationWarning
           className="flex-1 rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
         />
         <Button size="lg" className="rounded-xl px-6">
