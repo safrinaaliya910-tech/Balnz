@@ -1,5 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
+import { Instagram, Facebook, Youtube, Linkedin } from "lucide-react"
 
 const navigation = {
   programs: [
@@ -8,7 +9,7 @@ const navigation = {
     { name: "Athlete Stability", href: "/programs#athlete" },
     { name: "Home-Based Training", href: "/programs#home" },
     { name: "Kids & Teens", href: "/programs#kids" },
-  { name: "Rehab & Recovery", href: "/programs#rehab" },
+    { name: "Rehab & Recovery", href: "/programs#rehab" },
   ],
   company: [
     { name: "About BALNZ", href: "/about" },
@@ -30,6 +31,13 @@ const navigation = {
     { name: "YouTube", href: "https://youtube.com/balnz", icon: "Youtube" },
     { name: "LinkedIn", href: "https://linkedin.com/company/balnz", icon: "Linkedin" },
   ],
+}
+
+const socialIcons = {
+  Instagram,
+  Facebook,
+  Youtube,
+  Linkedin,
 }
 
 export function Footer() {
@@ -138,10 +146,21 @@ export function Footer() {
             <Link href="/terms" className="hover:text-primary transition-colors">Terms</Link>
             <Link href="/privacy" className="hover:text-primary transition-colors">Privacy</Link>
             <span className="text-muted-foreground/30">|</span>
-            <a href="https://instagram.com/balnz" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Instagram</a>
-            <a href="https://facebook.com/balnz" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Facebook</a>
-            <a href="https://youtube.com/balnz" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">YouTube</a>
-            <a href="https://linkedin.com/company/balnz" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">LinkedIn</a>
+            {navigation.social.map((item) => {
+              const Icon = socialIcons[item.icon as keyof typeof socialIcons]
+              return (
+                  <a
+                  key={item.name}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={item.name}
+                  className="hover:text-primary transition-colors"
+                >
+                  <Icon className="h-5 w-5" />
+                </a>
+              )
+            })}
           </div>
         </div>
       </div>
