@@ -3,7 +3,10 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
 import { CheckCircle } from "lucide-react"
-
+export const metadata = {
+  title: "Our Services",
+  description: "Explore BALNZ's balance training services: individual assessments, one-on-one training, small group classes, workplace programs, community workshops, and online resources.",
+}
 const services = [
   {
     title: "Individual Balance Assessments",

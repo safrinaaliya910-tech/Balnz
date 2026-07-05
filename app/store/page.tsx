@@ -3,7 +3,10 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
 import { ShoppingBag, BookOpen, Package, Activity, MonitorPlay, CheckCircle } from "lucide-react"
-
+export const metadata = {
+  title: "Shop",
+  description: "Shop BALNZ products for safe, effective balance training at home — balance boards, resistance bands, stability tools, the BALNZ book, and digital training programs.",
+}
 const products = [
   {
     title: "BALNZ Balance Book",
